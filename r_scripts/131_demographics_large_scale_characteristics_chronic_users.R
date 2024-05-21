@@ -3,7 +3,6 @@
 # relevant libraries
 library(CDMConnector)
 library(dplyr)
-library(ggplot2)
 library(CohortCharacteristics)
 
 ################################################################################
@@ -13,8 +12,8 @@ library(CohortCharacteristics)
 # perform lsc on study population on condition occurence and drug exposure
 lsc_first_time_chron_macro_users_aco <- first_time_chron_macro_users_aco |> 
   CohortCharacteristics::summariseLargeScaleCharacteristics(
-    window = list(c(-365,0),c(-Inf,0)),
-    eventInWindow = c("condition_occurrence","drug_exposure"),
+    window = list(c(-7,0)),
+    eventInWindow = c("condition_occurrence"),
     minimumFrequency = 0.05
   )
 
@@ -46,8 +45,8 @@ write.csv(demographics_first_time_chron_macro_users_aco,
 # perform lsc on study population on condition occurence and drug exposure
 lsc_first_time_chron_macro_users_asthma <- first_time_chron_macro_users_asthma |> 
   CohortCharacteristics::summariseLargeScaleCharacteristics(
-    window = list(c(-365,0),c(-Inf,0)),
-    eventInWindow = c("condition_occurrence","drug_exposure"),
+    window = list(c(-7,0)),
+    eventInWindow = c("condition_occurrence"),
     minimumFrequency = 0.05
   )
 
@@ -79,8 +78,8 @@ write.csv(demographics_first_time_chron_macro_users_asthma,
 # perform lsc on study population on condition occurence and drug exposure
 lsc_first_time_chron_macro_users_copd <- first_time_chron_macro_users_copd |> 
   CohortCharacteristics::summariseLargeScaleCharacteristics(
-    window = list(c(-365,0),c(-Inf,0)),
-    eventInWindow = c("condition_occurrence","drug_exposure"),
+    window = list(c(-7,0)),
+    eventInWindow = c("condition_occurrence"),
     minimumFrequency = 0.05
   )
 
@@ -112,8 +111,8 @@ write.csv(demographics_first_time_chron_macro_users_copd,
 # perform lsc on study population on condition occurence and drug exposure
 lsc_first_time_chron_macro_users_general_population <- first_time_chron_macro_users_general_population |> 
   CohortCharacteristics::summariseLargeScaleCharacteristics(
-    window = list(c(-365,0),c(-Inf,0)),
-    eventInWindow = c("condition_occurrence","drug_exposure"),
+    window = list(c(-7,0)),
+    eventInWindow = c("condition_occurrence"),
     minimumFrequency = 0.05
   )
 

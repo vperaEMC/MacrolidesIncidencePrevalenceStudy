@@ -22,8 +22,8 @@ cdm <- IncidencePrevalence::generateDenominatorCohortSet(
   cdm = cdm,
   name = "denominator_inc_general_population",
   #cohortDateRange = as.Date(c("2010-01-01", "2022-12-31")),
-  #ageGroup = list(c(0, 150)),
-  #sex = "both"
+  ageGroup = list(c(0, 150), c(0,40), c(41,150)),
+  sex = c("Both", "Female", "Male"),
   #daysPriorObservation = 0,
   requirementInteractions = TRUE)
 
@@ -51,7 +51,7 @@ inc_general_population_adj <-
   inc_general_population  %>%
   dplyr::mutate(
     denominator_cohort_name = ifelse(
-      denominator_cohort_name=="denominator_cohort_1",
+      denominator_cohort_name=="Denominator cohort 1",
       "General population",
       NA)
   )

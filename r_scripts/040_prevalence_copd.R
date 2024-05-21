@@ -20,6 +20,8 @@ library(IncidencePrevalence)
 cdm_copd <- IncidencePrevalence::generateDenominatorCohortSet(
   cdm = cdm_copd,
   name = "denominator_prevalence_copd",
+  ageGroup = list(c(0, 150), c(0,40), c(41,150)),
+  sex = c("Both", "Female", "Male"),
   requirementInteractions = TRUE)
 
 # calculating prevalence
@@ -45,7 +47,7 @@ prev_copd_adj <-
   prev_copd %>%
   dplyr::mutate(
     denominator_cohort_name = ifelse(
-      denominator_cohort_name=="denominator_cohort_1",
+      denominator_cohort_name=="Denominator cohort 1",
       "COPD",
       NA)
     )

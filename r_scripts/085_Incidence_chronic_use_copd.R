@@ -23,7 +23,8 @@ cdm_copd <- IncidencePrevalence::generateDenominatorCohortSet(
   cdm = cdm_copd,
   name = "denominator_incidence_chronic_use_copd",
   #cohortDateRange = as.Date(c("2010-01-01", "2022-12-31")),
-  #ageGroup = list(c(0, 150)),
+  ageGroup = list(c(0, 150), c(0,40), c(41,150)),
+  sex = c("Both", "Female", "Male"),
   #daysPriorObservation = 0,
   requirementInteractions = TRUE)
 
@@ -51,7 +52,7 @@ inc_chronic_use_copd_adj <-
   inc_chronic_use_copd %>%
   dplyr::mutate(
     denominator_cohort_name = ifelse(
-      denominator_cohort_name=="denominator_cohort_1",
+      denominator_cohort_name=="Denominator cohort 1",
       "Chronic use",
       NA)
   )
@@ -59,4 +60,3 @@ inc_chronic_use_copd_adj <-
 # save
 if (!dir.exists(here::here("Macrolides"))) {dir.create(here::here("Macrolides"))}
 write.csv(inc_chronic_use_copd_adj, here::here("Macrolides/inc_chronic_use_copd_adj.csv"))
-
