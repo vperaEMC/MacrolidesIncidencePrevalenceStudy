@@ -21,7 +21,7 @@ library(IncidencePrevalence)
 cdm <- IncidencePrevalence::generateDenominatorCohortSet(
   cdm = cdm,
   name = "denominator_prevalence_chronic_use_general_population",
-  cohortDateRange = as.Date(c("2010-01-01", "2022-12-31")),
+  #cohortDateRange = as.Date(c("2010-01-01", "2022-12-31")),
   ageGroup = list(c(0, 150), c(0,40), c(41,150)),
   sex = c("Both", "Female", "Male"),
   #daysPriorObservation = 0,
