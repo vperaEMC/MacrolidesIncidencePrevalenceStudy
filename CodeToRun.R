@@ -2,10 +2,6 @@
 #install.packages("renv") # if not already installed, install renv from CRAN
 renv::restore() # this should prompt you to install the various packages required for the study
 
-# CireR package is included under the folder github_packges and can be installed like this:
-install.packages(
-  here::here("github_packages/CirceR-1.3.3.tar.gz"), repos = NULL)
-
 # Load packages ------
 library(DBI)
 library(here)
