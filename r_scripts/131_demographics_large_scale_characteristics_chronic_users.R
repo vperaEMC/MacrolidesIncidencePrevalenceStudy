@@ -14,7 +14,7 @@ lsc_first_time_chron_macro_users_aco <- first_time_chron_macro_users_aco |>
   CohortCharacteristics::summariseLargeScaleCharacteristics(
     window = list(c(-7,0)),
     eventInWindow = c("condition_occurrence"),
-    minimumFrequency = 0.05
+    minimumFrequency = 0.005
   )
 
 # export csv file
@@ -47,7 +47,7 @@ lsc_first_time_chron_macro_users_asthma <- first_time_chron_macro_users_asthma |
   CohortCharacteristics::summariseLargeScaleCharacteristics(
     window = list(c(-7,0)),
     eventInWindow = c("condition_occurrence"),
-    minimumFrequency = 0.05
+    minimumFrequency = 0.005
   )
 
 # export csv file
@@ -80,7 +80,7 @@ lsc_first_time_chron_macro_users_copd <- first_time_chron_macro_users_copd |>
   CohortCharacteristics::summariseLargeScaleCharacteristics(
     window = list(c(-7,0)),
     eventInWindow = c("condition_occurrence"),
-    minimumFrequency = 0.05
+    minimumFrequency = 0.005
   )
 
 # export csv file
@@ -113,7 +113,7 @@ lsc_first_time_chron_macro_users_general_population <- first_time_chron_macro_us
   CohortCharacteristics::summariseLargeScaleCharacteristics(
     window = list(c(-7,0)),
     eventInWindow = c("condition_occurrence"),
-    minimumFrequency = 0.05
+    minimumFrequency = 0.005
   )
 
 # export csv file
