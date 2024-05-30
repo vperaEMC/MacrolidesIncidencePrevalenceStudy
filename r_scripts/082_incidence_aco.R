@@ -58,4 +58,4 @@ inc_aco_adj <-
 
 # save
 if (!dir.exists(here::here("Macrolides"))) {dir.create(here::here("Macrolides"))}
-write.csv(inc_copd_adj, here::here("Macrolides/inc_aco_adj.csv"))
+write.csv(inc_aco_adj, here::here("Macrolides/inc_aco_adj.csv"))
