@@ -1,6 +1,9 @@
-# Install dependencies -----
-#install.packages("renv") # if not already installed, install renv from CRAN
-renv::restore() # this should prompt you to install the various packages required for the study
+# if not already installed, install renv and load it
+# install.packages("renv")
+library(renv)
+
+# restore specific package versions with renv
+renv::restore() 
 
 # Load packages ------
 library(DBI)

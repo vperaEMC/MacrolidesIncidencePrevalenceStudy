@@ -75,16 +75,14 @@ cdm_aco$first_time_chron_macro_users_aco <-
   compute()
 
 comorbidities_summarised_aco <- cdm_aco$first_time_chron_macro_users_aco %>%
-  PatientProfiles::summariseCharacteristics(
-    strata = list(),
-    cohortIntersect = list(
+  CohortCharacteristics::summariseCharacteristics(
+    cohortIntersectFlag = list(
       "Comedication" = list(
         indexDate = "cohort_start_date",
         censorDate = "cohort_end_date",
         targetCohortTable = "comedication_aco",
         targetStartDate = "cohort_start_date",
         targetEndDate = "cohort_end_date",
-        value = "flag",
         window = list(c(-365, 0)),
         nameStyle = "{cohort_name}_{window_name}"
       ),
@@ -94,14 +92,13 @@ comorbidities_summarised_aco <- cdm_aco$first_time_chron_macro_users_aco %>%
         targetCohortTable = "comorbidities_aco",
         targetStartDate = "cohort_start_date",
         targetEndDate = "cohort_end_date",
-        value = "flag",
         window = list(c(-365, 0)),
         nameStyle = "{cohort_name}_{window_name}"
       )
     )
   )
 
-# PatientProfiles::tableCharacteristics(comorbidities_summarised_aco)
+# CohortCharacteristics::tableCharacteristics(comorbidities_summarised_aco)
 
 # export csv file
 write.csv(comorbidities_summarised_aco, 
@@ -144,16 +141,14 @@ cdm_copd$first_time_chron_macro_users_copd <-
   compute()
 
 comorbidities_summarised_copd <- cdm_copd$first_time_chron_macro_users_copd %>%
-  PatientProfiles::summariseCharacteristics(
-    strata = list(),
-    cohortIntersect = list(
+  CohortCharacteristics::summariseCharacteristics(
+    cohortIntersectFlag = list(
       "Comedication" = list(
         indexDate = "cohort_start_date",
         censorDate = "cohort_end_date",
         targetCohortTable = "comedication_copd",
         targetStartDate = "cohort_start_date",
         targetEndDate = "cohort_end_date",
-        value = "flag",
         window = list(c(-365, 0)),
         nameStyle = "{cohort_name}_{window_name}"
       ),
@@ -163,14 +158,13 @@ comorbidities_summarised_copd <- cdm_copd$first_time_chron_macro_users_copd %>%
         targetCohortTable = "comorbidities_copd",
         targetStartDate = "cohort_start_date",
         targetEndDate = "cohort_end_date",
-        value = "flag",
         window = list(c(-365, 0)),
         nameStyle = "{cohort_name}_{window_name}"
+      )
     )
   )
-  )
 
-# PatientProfiles::tableCharacteristics(comorbidities_summarised_copd)
+# CohortCharacteristics::tableCharacteristics(comorbidities_summarised_copd)
 
 # export csv file
 write.csv(comorbidities_summarised_copd, 
@@ -213,16 +207,14 @@ cdm_asthma$first_time_chron_macro_users_asthma <-
   compute()
 
 comorbidities_summarised_asthma <- cdm_asthma$first_time_chron_macro_users_asthma %>%
-  PatientProfiles::summariseCharacteristics(
-    strata = list(),
-    cohortIntersect = list(
+  CohortCharacteristics::summariseCharacteristics(
+    cohortIntersectFlag = list(
       "Comedication" = list(
         indexDate = "cohort_start_date",
         censorDate = "cohort_end_date",
         targetCohortTable = "comedication_asthma",
         targetStartDate = "cohort_start_date",
         targetEndDate = "cohort_end_date",
-        value = "flag",
         window = list(c(-365, 0)),
         nameStyle = "{cohort_name}_{window_name}"
       ),
@@ -232,13 +224,12 @@ comorbidities_summarised_asthma <- cdm_asthma$first_time_chron_macro_users_asthm
         targetCohortTable = "comorbidities_asthma",
         targetStartDate = "cohort_start_date",
         targetEndDate = "cohort_end_date",
-        value = "flag",
         window = list(c(-365, 0)),
         nameStyle = "{cohort_name}_{window_name}"
+      )
     )
   )
-)
-# PatientProfiles::tableCharacteristics(comorbidities_summarised_asthma)
+# CohortCharacteristics::tableCharacteristics(comorbidities_summarised_asthma)
 
 # export csv file
 write.csv(comorbidities_summarised_asthma, 
@@ -282,16 +273,14 @@ cdm$first_time_chron_macro_users_general_population <-
   compute()
 
 comorbidities_summarised_general_population <- cdm$first_time_chron_macro_users_general_population %>%
-  PatientProfiles::summariseCharacteristics(
-    strata = list(),
-    cohortIntersect = list(
+  CohortCharacteristics::summariseCharacteristics(
+    cohortIntersectFlag = list(
       "Comedication" = list(
         indexDate = "cohort_start_date",
         censorDate = "cohort_end_date",
         targetCohortTable = "comedication_general_population",
         targetStartDate = "cohort_start_date",
         targetEndDate = "cohort_end_date",
-        value = "flag",
         window = list(c(-365, 0)),
         nameStyle = "{cohort_name}_{window_name}"
       ),
@@ -301,20 +290,19 @@ comorbidities_summarised_general_population <- cdm$first_time_chron_macro_users_
         targetCohortTable = "comorbidities_general_population",
         targetStartDate = "cohort_start_date",
         targetEndDate = "cohort_end_date",
-        value = "flag",
         window = list(c(-365, 0)),
         nameStyle = "{cohort_name}_{window_name}"
+      )
     )
   )
-  )
 
-# PatientProfiles::tableCharacteristics(comorbidities_summarised_general_population)
+# CohortCharacteristics::tableCharacteristics(comorbidities_summarised_general_population)
 
 # export csv file
 write.csv(comorbidities_summarised_general_population, 
           here::here("Macrolides/comorbidities_summarised_general_population.csv"))
 
-# PatientProfiles::tableCharacteristics(comorbidities_summarised_copd)
-# PatientProfiles::tableCharacteristics(comorbidities_summarised_aco)
-# PatientProfiles::tableCharacteristics(comorbidities_summarised_asthma)
-# PatientProfiles::tableCharacteristics(comorbidities_summarised_general_population)
+# CohortCharacteristics::tableCharacteristics(comorbidities_summarised_copd)
+# CohortCharacteristics::tableCharacteristics(comorbidities_summarised_aco)
+# CohortCharacteristics::tableCharacteristics(comorbidities_summarised_asthma)
+# CohortCharacteristics::tableCharacteristics(comorbidities_summarised_general_population)

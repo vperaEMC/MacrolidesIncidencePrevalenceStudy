@@ -24,14 +24,7 @@ write.csv(lsc_first_time_chron_macro_users_aco,
 # demographics
 demographics_first_time_chron_macro_users_aco <- 
   CohortCharacteristics::summariseCharacteristics(
-  cohort = first_time_chron_macro_users_aco,
-  strata = list(),
-  demographics = TRUE,
-  ageGroup = NULL,
-  tableIntersect = list(),
-  cohortIntersect = list(),
-  conceptIntersect = list(),
-  otherVariables = character()
+  cohort = first_time_chron_macro_users_aco
 )
 
 # export csv file
@@ -57,14 +50,7 @@ write.csv(lsc_first_time_chron_macro_users_asthma,
 # demographics
 demographics_first_time_chron_macro_users_asthma <- 
   CohortCharacteristics::summariseCharacteristics(
-    cohort = first_time_chron_macro_users_asthma,
-    strata = list(),
-    demographics = TRUE,
-    ageGroup = NULL,
-    tableIntersect = list(),
-    cohortIntersect = list(),
-    conceptIntersect = list(),
-    otherVariables = character()
+    cohort = first_time_chron_macro_users_asthma
   )
 
 # export csv file
@@ -90,14 +76,7 @@ write.csv(lsc_first_time_chron_macro_users_copd,
 # demographics
 demographics_first_time_chron_macro_users_copd <- 
   CohortCharacteristics::summariseCharacteristics(
-    cohort = first_time_chron_macro_users_copd,
-    strata = list(),
-    demographics = TRUE,
-    ageGroup = NULL,
-    tableIntersect = list(),
-    cohortIntersect = list(),
-    conceptIntersect = list(),
-    otherVariables = character()
+    cohort = first_time_chron_macro_users_copd
   )
 
 # export csv file
@@ -123,14 +102,7 @@ write.csv(lsc_first_time_chron_macro_users_general_population,
 # demographics
 demographics_first_time_chron_macro_users_general_population <- 
   CohortCharacteristics::summariseCharacteristics(
-    cohort = first_time_chron_macro_users_general_population,
-    strata = list(),
-    demographics = TRUE,
-    ageGroup = NULL,
-    tableIntersect = list(),
-    cohortIntersect = list(),
-    conceptIntersect = list(),
-    otherVariables = character()
+    cohort = first_time_chron_macro_users_general_population
   )
 
 # export csv file
