@@ -3,6 +3,25 @@
     {
       "concept": {
         "CONCEPT_CLASS_ID": "Procedure",
+        "CONCEPT_CODE": "86688004",
+        "CONCEPT_ID": 4314809,
+        "CONCEPT_NAME": "Apexcardiogram with ECG lead",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "SNOMED",
+        "VALID_START_DATE": "2002-01-31",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Procedure",
         "CONCEPT_CODE": "46825001",
         "CONCEPT_ID": 4187078,
         "CONCEPT_NAME": "Electrocardiographic monitoring",
@@ -382,310 +401,6 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS",
-        "CONCEPT_CODE": "4A02X9Z",
-        "CONCEPT_ID": 2786742,
-        "CONCEPT_NAME": "Measurement of Cardiac Output, External Approach",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "2014-04-22",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS",
-        "CONCEPT_CODE": "4A02XCZ",
-        "CONCEPT_ID": 2786743,
-        "CONCEPT_NAME": "Measurement of Cardiac Rate, External Approach",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "2014-04-22",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS",
-        "CONCEPT_CODE": "4A02XHZ",
-        "CONCEPT_ID": 2786745,
-        "CONCEPT_NAME": "Measurement of Cardiac Sound, External Approach",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "2014-04-22",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS",
-        "CONCEPT_CODE": "4A02XM4",
-        "CONCEPT_ID": 2786746,
-        "CONCEPT_NAME": "Measurement of Cardiac Total Activity, External Approach",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "2014-04-22",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS",
-        "CONCEPT_CODE": "4A1204Z",
-        "CONCEPT_ID": 2787293,
-        "CONCEPT_NAME": "Monitoring of Cardiac Electrical Activity, Open Approach",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "2014-04-22",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS",
-        "CONCEPT_CODE": "4A1234Z",
-        "CONCEPT_ID": 2787298,
-        "CONCEPT_NAME": "Monitoring of Cardiac Electrical Activity, Percutaneous Approach",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "2014-04-22",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS",
-        "CONCEPT_CODE": "4A12X9Z",
-        "CONCEPT_ID": 2787305,
-        "CONCEPT_NAME": "Monitoring of Cardiac Output, External Approach",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "2014-04-22",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS",
-        "CONCEPT_CODE": "4A12XCZ",
-        "CONCEPT_ID": 2787306,
-        "CONCEPT_NAME": "Monitoring of Cardiac Rate, External Approach",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "2014-04-22",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS",
-        "CONCEPT_CODE": "4A12XHZ",
-        "CONCEPT_ID": 2787308,
-        "CONCEPT_NAME": "Monitoring of Cardiac Sound, External Approach",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "2014-04-22",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS",
-        "CONCEPT_CODE": "4A12XM4",
-        "CONCEPT_ID": 2787309,
-        "CONCEPT_NAME": "Monitoring of Cardiac Stress, External Approach",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "2014-04-22",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS",
-        "CONCEPT_CODE": "4A12XSH",
-        "CONCEPT_ID": 42898010,
-        "CONCEPT_NAME": "Monitoring of Cardiac Vascular Perfusion using Indocyanine Green Dye, External Approach",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "2014-04-20",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS Hierarchy",
-        "CONCEPT_CODE": "4A02X9",
-        "CONCEPT_ID": 2853930,
-        "CONCEPT_NAME": "Measurement and Monitoring @ Physiological Systems @ Measurement @ Cardiac @ External @ Output",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "1970-01-01",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS Hierarchy",
-        "CONCEPT_CODE": "4A02XC",
-        "CONCEPT_ID": 2805853,
-        "CONCEPT_NAME": "Measurement and Monitoring @ Physiological Systems @ Measurement @ Cardiac @ External @ Rate",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "1970-01-01",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS Hierarchy",
-        "CONCEPT_CODE": "4A02XH",
-        "CONCEPT_ID": 2841514,
-        "CONCEPT_NAME": "Measurement and Monitoring @ Physiological Systems @ Measurement @ Cardiac @ External @ Sound",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "1970-01-01",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS Hierarchy",
-        "CONCEPT_CODE": "4A02XM",
-        "CONCEPT_ID": 2813686,
-        "CONCEPT_NAME": "Measurement and Monitoring @ Physiological Systems @ Measurement @ Cardiac @ External @ Total Activity",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "1970-01-01",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "ICD10PCS Hierarchy",
-        "CONCEPT_CODE": "4A12X9",
-        "CONCEPT_ID": 2805859,
-        "CONCEPT_NAME": "Measurement and Monitoring @ Physiological Systems @ Monitoring @ Cardiac @ External @ Output",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "ICD10PCS",
-        "VALID_START_DATE": "1970-01-01",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
         "CONCEPT_CLASS_ID": "ICD10PCS Hierarchy",
         "CONCEPT_CODE": "4A12XC",
         "CONCEPT_ID": 2853945,
@@ -929,25 +644,6 @@
       },
       "isExcluded": true,
       "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Procedure",
-        "CONCEPT_CODE": "86688004",
-        "CONCEPT_ID": 4314809,
-        "CONCEPT_NAME": "Apexcardiogram with ECG lead",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-31",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
       "includeMapped": false
     },
     {
@@ -1289,6 +985,329 @@
         "VALID_END_DATE": "2099-12-31"
       },
       "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS",
+        "CONCEPT_CODE": "4A02X9Z",
+        "CONCEPT_ID": 2786742,
+        "CONCEPT_NAME": "Measurement of Cardiac Output, External Approach",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "2014-04-22",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS",
+        "CONCEPT_CODE": "4A02XCZ",
+        "CONCEPT_ID": 2786743,
+        "CONCEPT_NAME": "Measurement of Cardiac Rate, External Approach",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "2014-04-22",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS",
+        "CONCEPT_CODE": "4A02XHZ",
+        "CONCEPT_ID": 2786745,
+        "CONCEPT_NAME": "Measurement of Cardiac Sound, External Approach",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "2014-04-22",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS",
+        "CONCEPT_CODE": "4A02XM4",
+        "CONCEPT_ID": 2786746,
+        "CONCEPT_NAME": "Measurement of Cardiac Total Activity, External Approach",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "2014-04-22",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS",
+        "CONCEPT_CODE": "4A1204Z",
+        "CONCEPT_ID": 2787293,
+        "CONCEPT_NAME": "Monitoring of Cardiac Electrical Activity, Open Approach",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "2014-04-22",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS",
+        "CONCEPT_CODE": "4A1234Z",
+        "CONCEPT_ID": 2787298,
+        "CONCEPT_NAME": "Monitoring of Cardiac Electrical Activity, Percutaneous Approach",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "2014-04-22",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS",
+        "CONCEPT_CODE": "4A12X9Z",
+        "CONCEPT_ID": 2787305,
+        "CONCEPT_NAME": "Monitoring of Cardiac Output, External Approach",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "2014-04-22",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS",
+        "CONCEPT_CODE": "4A12XCZ",
+        "CONCEPT_ID": 2787306,
+        "CONCEPT_NAME": "Monitoring of Cardiac Rate, External Approach",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "2014-04-22",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS",
+        "CONCEPT_CODE": "4A12XHZ",
+        "CONCEPT_ID": 2787308,
+        "CONCEPT_NAME": "Monitoring of Cardiac Sound, External Approach",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "2014-04-22",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS",
+        "CONCEPT_CODE": "4A12XM4",
+        "CONCEPT_ID": 2787309,
+        "CONCEPT_NAME": "Monitoring of Cardiac Stress, External Approach",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "2014-04-22",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS",
+        "CONCEPT_CODE": "4A12XSH",
+        "CONCEPT_ID": 42898010,
+        "CONCEPT_NAME": "Monitoring of Cardiac Vascular Perfusion using Indocyanine Green Dye, External Approach",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "2014-04-20",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS Hierarchy",
+        "CONCEPT_CODE": "4A02X9",
+        "CONCEPT_ID": 2853930,
+        "CONCEPT_NAME": "Measurement and Monitoring @ Physiological Systems @ Measurement @ Cardiac @ External @ Output",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "1970-01-01",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS Hierarchy",
+        "CONCEPT_CODE": "4A02XC",
+        "CONCEPT_ID": 2805853,
+        "CONCEPT_NAME": "Measurement and Monitoring @ Physiological Systems @ Measurement @ Cardiac @ External @ Rate",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "1970-01-01",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS Hierarchy",
+        "CONCEPT_CODE": "4A02XH",
+        "CONCEPT_ID": 2841514,
+        "CONCEPT_NAME": "Measurement and Monitoring @ Physiological Systems @ Measurement @ Cardiac @ External @ Sound",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "1970-01-01",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS Hierarchy",
+        "CONCEPT_CODE": "4A02XM",
+        "CONCEPT_ID": 2813686,
+        "CONCEPT_NAME": "Measurement and Monitoring @ Physiological Systems @ Measurement @ Cardiac @ External @ Total Activity",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "1970-01-01",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "ICD10PCS Hierarchy",
+        "CONCEPT_CODE": "4A12X9",
+        "CONCEPT_ID": 2805859,
+        "CONCEPT_NAME": "Measurement and Monitoring @ Physiological Systems @ Monitoring @ Cardiac @ External @ Output",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "ICD10PCS",
+        "VALID_START_DATE": "1970-01-01",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "LOINC Class",
+        "CONCEPT_CODE": "EKG.MEAS",
+        "CONCEPT_ID": 45876205,
+        "CONCEPT_NAME": "Electrocardiogram measures",
+        "DOMAIN_ID": "Measurement",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "C",
+        "STANDARD_CONCEPT_CAPTION": "Classification",
+        "VOCABULARY_ID": "LOINC",
+        "VALID_START_DATE": "1970-01-01",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": false,
       "includeDescendants": true,
       "includeMapped": false
     }

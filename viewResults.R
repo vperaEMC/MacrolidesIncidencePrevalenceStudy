@@ -1,0 +1,27 @@
+# to view the results you can utilize these functions:
+
+# comorbidities & comedication
+CohortCharacteristics::tableCharacteristics(comorbidities_summarised_copd)
+CohortCharacteristics::tableCharacteristics(comorbidities_summarised_aco)
+CohortCharacteristics::tableCharacteristics(comorbidities_summarised_asthma)
+CohortCharacteristics::tableCharacteristics(comorbidities_summarised_general_population)
+
+# demographics
+CohortCharacteristics::tableCharacteristics(demographics_first_time_chron_macro_users_aco)
+CohortCharacteristics::tableCharacteristics(demographics_first_time_chron_macro_users_asthma)
+CohortCharacteristics::tableCharacteristics(demographics_first_time_chron_macro_users_copd)
+CohortCharacteristics::tableCharacteristics(demographics_first_time_chron_macro_users_general_population)
+
+# large scale characterization
+CohortCharacteristics::tableLargeScaleCharacteristics(lsc_first_time_chron_macro_users_aco)
+CohortCharacteristics::tableLargeScaleCharacteristics(lsc_first_time_chron_macro_users_asthma)
+CohortCharacteristics::tableLargeScaleCharacteristics(lsc_first_time_chron_macro_users_copd)
+CohortCharacteristics::tableLargeScaleCharacteristics(lsc_first_time_chron_macro_users_general_population)
+
+# ecg
+View(intersect_ecg_aco)
+View(intersect_ecg_asthma)
+View(intersect_ecg_copd)
+View(intersect_ecg_general_population)
+
+# for drugutilisation tables, view private link attached in email
