@@ -301,8 +301,3 @@ comorbidities_summarised_general_population <- cdm$first_time_chron_macro_users_
 # export csv file
 write.csv(comorbidities_summarised_general_population, 
           here::here("Macrolides/comorbidities_summarised_general_population.csv"))
-
-# CohortCharacteristics::tableCharacteristics(comorbidities_summarised_copd)
-# CohortCharacteristics::tableCharacteristics(comorbidities_summarised_aco)
-# CohortCharacteristics::tableCharacteristics(comorbidities_summarised_asthma)
-# CohortCharacteristics::tableCharacteristics(comorbidities_summarised_general_population)
