@@ -5,3 +5,5 @@
 .Rprofile
 CodeToRun_filled_in.R
 renv
+setting_up_test_cdm.R
+testpatients
