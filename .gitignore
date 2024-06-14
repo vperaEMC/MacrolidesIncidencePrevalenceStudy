@@ -5,3 +5,6 @@
 .Rprofile
 CodeToRun_filled_in.R
 renv
+Macrolides
+install_missing_packages_and_update_lockfile.R
+test
