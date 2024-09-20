@@ -7,11 +7,11 @@ getwd()
 # apply parameter settings for study
 source("001a_settings_parameters_study.R")
 
+# make the subsets from the cdm
+source("001d_creating_cdm_subsets.R")
+
 # create outcome definitions
 source("002_preparing_outcome_concept_sets.R")
-
-# make the subsets from the cdm
-source("002_making_other_test_cdms.R")
 
 # run prevalence and incidence analysis
 source("003_prevalences_and_incidences.R")
