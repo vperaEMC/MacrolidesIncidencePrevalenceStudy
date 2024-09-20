@@ -1,7 +1,11 @@
+################################################################################
+################## READ ALL THE STEPS AND RUN LINE BY LINE #####################
+################################################################################
+
 # Install dependencies -----
-# install.packages("renv") # if not already installed, install renv from CRAN
-# seperate lockfiles are povided for ipci and sidiap (default).
-# the sidiap lockfile is also valid for R versio 4.4.0
+# install.packages('renv') # if not already installed, install renv from CRAN
+# seperate lockfiles are povided for ipci and sidiap (default in this script).
+# the sidiap lockfile is also valid for R version 4.4.0
 renv::restore(lockfile = 'renv_sidiap_r_4_3_2.lock') # this should prompt you to install the various packages required for the study
 
 # Load packages ------
@@ -23,20 +27,18 @@ library(RPostgres)
 # make the db connection, example:
 
 # dbiConnection <- DBI::dbConnect(RPostgres::Postgres(),
-#                                 dbname = "...",
-#                                 host = "...",
-#                                 port = "...",
-#                                 user = "...",
-#                                 password = "...")
-dbiConnection <- DBI::dbConnect("....")
+#                                 dbname = '...',
+#                                 host = '...',
+#                                 port = '...',
+#                                 user = '...',
+#                                 password = '...')
+dbiConnection <- DBI::dbConnect('....')
 
 # The name of the schema that contains the OMOP CDM with patient-level data
-cdm_database_schema<-"...."
+cdm_database_schema<-'....'
 
 # The name of the schema where results tables will be created 
-results_database_schema<-"...."
-
-# create cdm reference ----
+results_database_schema<-'....'
 
 # make the CDM object, use connection details from previously
 cdm <- CDMConnector::cdm_from_con(
@@ -51,6 +53,6 @@ cdm$person %>%
   tally()
 
 # Run the study ------
-source(here("RunStudy.R"))
+source(here('r_scripts','000_RunStudy.R'))
 # after the study is run you should have a folder called Macrolides in 
 # the root of this project to be shared
