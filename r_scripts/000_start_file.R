@@ -1,7 +1,7 @@
 library(here)
 
 # setwd to the testscripts folder
-setwd(here::here("r_scripts_tests"))
+setwd(here::here("r_scripts"))
 getwd()
 
 # apply test settings OR full settings
