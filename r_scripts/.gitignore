@@ -1,5 +1,4 @@
 010_test_settings.R
-000_start_file.R
 001b_settings_parameters_test.R
 001c_testgenerator_new_test_cdm.R
 000_RunStudy_testfile.R
