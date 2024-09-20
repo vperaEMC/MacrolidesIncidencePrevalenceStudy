@@ -28,10 +28,10 @@ your_result_imported_readable  <-
 ################################################################################
 
 # comorbidities & comedication
-CohortCharacteristics::tableCharacteristics(results_lsc$)
+CohortCharacteristics::tableCharacteristics(results_lsc)
 
 # demographics
-CohortCharacteristics::tableCharacteristics(results_demographics$)
+CohortCharacteristics::tableCharacteristics(results_demographics)
 
 # large scale characterization
 CohortCharacteristics::tableLargeScaleCharacteristics(your_result)
