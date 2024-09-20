@@ -1,4 +1,0 @@
-atlas_id,cohort_id,cohort_name,logic_description,generate_stats
-1607,1607,[VP] Asthma_cohort_macrolides_study_hl_2024,NA,FALSE
-1608,1608,[VP] COPD_cohort_macrolides_study_hl_2024,This cohort was used for the potentially harmful medication study presented at OHDSI global 2022 (and ERS 2023),FALSE
-1609,1609,[VP] ACO_cohort_macrolides_study_hl_2024,NA,FALSE

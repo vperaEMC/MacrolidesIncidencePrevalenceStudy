@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 000_RunStudy_testfile.R
 001b_settings_parameters_test.R
 001c_testgenerator_new_test_cdm.R
+=======
+010_test_settings.R
+001b_settings_parameters_test.R
+001c_testgenerator_new_test_cdm.R
+000_RunStudy_testfile.R
+002_making_other_test_cdms.R
+>>>>>>> loop_attempt
 001e_making_other_test_cdms.R

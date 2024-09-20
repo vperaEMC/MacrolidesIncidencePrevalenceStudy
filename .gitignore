@@ -4,7 +4,6 @@
 .Ruserdata
 .Rprofile
 CodeToRun_filled_in.R
-renv
 <<<<<<< HEAD
 Macrolides
 install_missing_packages_and_update_lockfile.R
@@ -18,9 +17,17 @@ mass_issue_checking
 test
 export_ics_temporary_fix
 Macrolides_v2
+<<<<<<< HEAD
+=======
+test_output
+test_subjects
+>>>>>>> loop_attempt
 cohorts_json_2024_sept
 concept_set_json_2024_sept
 fixing_the_lockfile.R
 renv - working_backup.lock
+<<<<<<< HEAD
 test_output
 test_subjects
+=======
+>>>>>>> loop_attempt

@@ -1,27 +1,42 @@
-# to view the results you can utilize these functions:
+# A problem when exporting and reimporting results is that some metadata is lost
+# so a temporary solution is to use omopgenerics to put the metadata back in
+# if it is desired to view the results in a table format from the following function:
+# CohortCharacteristics::tableCharacteristics()
+
+################################################################################
+######################       META DATA FIXER              ###################### 
+################################################################################
+
+# so only necessary when object leave R-environment
+your_result_imported <- readr::read_csv(
+  file = "your_result",
+  guess_max = 2^53) %>%
+  dplyr::select(-1) #double check if necessary
+
+your_result_imported_readable  <- 
+  omopgenerics::newSummarisedResult(
+    x = your_result_imported, 
+    settings = tibble::tibble(result_id = 1,
+                              package_name = "CohortCharacteristics", 
+                              package_version = "0.2.0",
+                              result_type = "summarised_characteristics")) 
+                                              # OR:
+                                              # "summarised_large_scale_characteristics"                                                                                                                       result_type = "summarised_characteristics"))
+
+################################################################################
+###################      FUNCTIONS TO VIEW RESULTS        ###################### 
+################################################################################
 
 # comorbidities & comedication
-CohortCharacteristics::tableCharacteristics(comorbidities_summarised_copd)
-CohortCharacteristics::tableCharacteristics(comorbidities_summarised_aco)
-CohortCharacteristics::tableCharacteristics(comorbidities_summarised_asthma)
-CohortCharacteristics::tableCharacteristics(comorbidities_summarised_general_population)
+CohortCharacteristics::tableCharacteristics(results_lsc)
 
 # demographics
-CohortCharacteristics::tableCharacteristics(demographics_first_time_chron_macro_users_aco)
-CohortCharacteristics::tableCharacteristics(demographics_first_time_chron_macro_users_asthma)
-CohortCharacteristics::tableCharacteristics(demographics_first_time_chron_macro_users_copd)
-CohortCharacteristics::tableCharacteristics(demographics_first_time_chron_macro_users_general_population)
+CohortCharacteristics::tableCharacteristics(results_demographics)
 
 # large scale characterization
-CohortCharacteristics::tableLargeScaleCharacteristics(lsc_first_time_chron_macro_users_aco)
-CohortCharacteristics::tableLargeScaleCharacteristics(lsc_first_time_chron_macro_users_asthma)
-CohortCharacteristics::tableLargeScaleCharacteristics(lsc_first_time_chron_macro_users_copd)
-CohortCharacteristics::tableLargeScaleCharacteristics(lsc_first_time_chron_macro_users_general_population)
+CohortCharacteristics::tableLargeScaleCharacteristics(your_result)
 
 # ecg
-View(intersect_ecg_aco)
-View(intersect_ecg_asthma)
-View(intersect_ecg_copd)
-View(intersect_ecg_general_population)
+View(ecg_results$...)
 
-# for drugutilisation tables, view private link attached in email
+# for drug utilisation tables, view private link attached in email
