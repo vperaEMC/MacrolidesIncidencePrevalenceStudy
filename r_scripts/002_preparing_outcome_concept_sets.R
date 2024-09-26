@@ -82,3 +82,5 @@ for (i in 1:length(list_csv)){
 }
 
 concept_set_comorbidities <-c(concept_ids_comorbidities_csv,concept_ids_comorbidities_json)
+
+rm(cdm)

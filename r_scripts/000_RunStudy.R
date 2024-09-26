@@ -17,10 +17,4 @@ source("002_preparing_outcome_concept_sets.R")
 source("003_prevalences_and_incidences.R")
 
 # run ecg analysis
-source("121_ecg_summary.R")
-
-# run lsc and demographics analysis
-source("131_demo_lsc_chronic_users.R")
-
-# run comedication and comorbidity analysis
-source("140_comed_comorb.R")
+source('121_ecg_demo_lsc_comed_comorb.R')
