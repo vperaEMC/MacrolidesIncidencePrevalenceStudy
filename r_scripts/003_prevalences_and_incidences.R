@@ -1,16 +1,16 @@
 # make an empty list to store the results in
 prevalences_table <- c()
 incidences_table <- c()
-denom_name <- "denominator"
+
 
 # loop it all
-for (i in seq_along(cdm_subsets)){
-  for(j in seq_along(duration_ranges)){
+for (j in seq_along(duration_ranges)){
+  for(i in seq_along(cdm_subsets)){
 
 # naming convention for numerators
-num_name <- paste0("numerator","_",names(duration_ranges)[j])
+num_name <- paste0("numerator","_",names(duration_ranges)[j],"_",names(cdm_subsets)[i])
 est_name <- paste0(names(cdm_subsets)[i],"_",names(duration_ranges)[j])
-
+denom_name <- paste0("denominator","_",names(cdm_subsets)[i])
   
 # generate the numerator
 cdm_subsets[[i]] <- DrugUtilisation::generateDrugUtilisationCohortSet(
@@ -26,7 +26,8 @@ cdm_subsets[[i]] <- DrugUtilisation::generateDrugUtilisationCohortSet(
 )
 
 # generating the denominator
-cdm_subsets[[i]] <- IncidencePrevalence::generateDenominatorCohortSet(
+cdm_subsets[[i]] <- IncidencePrevalence::generateTargetDenominatorCohortSet(
+  targetCohortTable = 'stud_cohorts',
   cdm = cdm_subsets[[i]],
   name = denom_name,
   ageGroup = age_groups_analysis,

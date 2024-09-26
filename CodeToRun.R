@@ -4,9 +4,10 @@
 
 # Install dependencies -----
 # install.packages('renv') # if not already installed, install renv from CRAN
-# seperate lockfiles are povided for ipci and sidiap (default in this script).
+# seperate lockfiles are povided for ipci and sidiap.
 # the sidiap lockfile is also valid for R version 4.4.0
-renv::restore(lockfile = 'renv_sidiap_r_4_3_2.lock') # this should prompt you to install the various packages required for the study
+renv::restore(lockfile = 'renv_sidiap_r_4_3_2.lock') # this should prompt you to 
+# install the various packages required for the study
 
 # Load packages ------
 library(DBI)

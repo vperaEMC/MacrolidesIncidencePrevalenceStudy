@@ -7,7 +7,7 @@ library(dplyr)
 ################################################################################
 
 # The way with CDMconnector to create cohorts within CDM object using json files
-path_to_cohort_json_files <- here::here("inst/cohorts")
+path_to_cohort_json_files <- path_setting_cohort
 list.files(path_to_cohort_json_files) 
 
 # read the json files that signify cohorts
@@ -24,38 +24,26 @@ cdm <- CDMConnector::generate_cohort_set(
   overwrite = TRUE
 )
 
-#  get the person IDs from asthma, check cohort_set (from read_cohort_set) which number is needed
-pers_ids_asthma <- 
-  cdm$stud_cohorts %>%
-  dplyr::filter(cohort_definition_id == 1664) %>%
-  dplyr::distinct(subject_id) %>%
-  dplyr::pull(subject_id)
 
-# and for COPD
-pers_ids_copd <- 
-  cdm$stud_cohorts %>%
-  dplyr::filter(cohort_definition_id == 1672) %>%
-  dplyr::distinct(subject_id) %>%
-  dplyr::pull(subject_id)
 
-# and for ACO
-pers_ids_aco <- 
-  cdm$stud_cohorts %>%
-  dplyr::filter(cohort_definition_id == 1673) %>%
-  dplyr::distinct(subject_id) %>%
-  dplyr::pull(subject_id)
+# empty list of person ids
+cdm_subsets <- list()
 
-# check if numbers make sense
-length(pers_ids_asthma)
-length(pers_ids_copd)
-length(pers_ids_aco)
-
-# subset the main CDM for cohorts of interest based on subject/person id
-cdm_asthma <- cdm %>%
-  CDMConnector::cdm_subset(person_id = pers_ids_asthma)
-
-cdm_copd <- cdm %>%
-  CDMConnector::cdm_subset(person_id = pers_ids_copd)
-
-cdm_aco <- cdm %>%
-  CDMConnector::cdm_subset(person_id = pers_ids_aco)
+for(i in seq_along(cohorts_of_interest)){
+  
+  cohort_number <- cohorts_of_interest[[i]]
+  
+  pers_ids_cohort <- 
+    cdm$stud_cohorts %>%
+    dplyr::filter(cohort_definition_id == cohort_number) %>%
+    dplyr::distinct(subject_id) %>%
+    dplyr::pull(subject_id)
+  
+  cdm_temp <- cdm %>%
+    CDMConnector::cdm_subset(person_id = pers_ids_cohort)
+  
+  cdm_subsets[[i]] <- cdm_temp
+  names(cdm_subsets)[i] <- names(cohorts_of_interest)[i]
+  
+  rm(cdm_temp)
+}

@@ -7,6 +7,8 @@ cohorts_of_interest <- list(
   'copd' = 1672,
   'aco' = 1673)
 
+path_setting_cohort <- here::here("inst/cohorts")
+
 ################################################################################
 ###################### INCIDENCE/PREVALENCE INPUT ##############################
 ################################################################################
@@ -19,8 +21,8 @@ time_interval <- c("overall","years")
 
 # list all the duration ranges of interest
 duration_ranges <- list(
-  "short" = c(1,29),
   "long" = c(30,Inf),
+  "short" = c(1,29),
   "no_restriction" = c(1,Inf)
 )
 

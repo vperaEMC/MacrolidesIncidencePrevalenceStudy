@@ -5,7 +5,7 @@ results_lsc <- list()
 
 for(i in seq_along(cdm_subsets)){
 # perform lsc on study population on condition occurrence and drug exposure
-lsc_first_time_chron_macro_users <- first_time_chron_macro_users |> 
+lsc_first_time_chron_macro_users <- cdm_subsets[[i]][[first_t_chro_use_name]] |> 
   CohortCharacteristics::summariseLargeScaleCharacteristics(
     window = list(c(-7,0)),
     eventInWindow = c("condition_occurrence"),
@@ -15,7 +15,7 @@ lsc_first_time_chron_macro_users <- first_time_chron_macro_users |>
 lsc_name <- paste0("lsc_",names(cdm_subsets)[i],".csv")
 
 # export csv file
-# write.csv(lsc_first_time_chron_macro_users, 
+# write.csv(lsc_cdm_subsets[[i]][[first_t_chro_use_name]], 
 #           here::here("Macrolides_v2",lsc_name))
 omopgenerics::exportSummarisedResult(lsc_first_time_chron_macro_users,
                                      fileName = lsc_name,
@@ -33,7 +33,7 @@ results_demographics <- list()
 # demographics
 demographics_first_time_chron_macro_users <- 
   CohortCharacteristics::summariseCharacteristics(
-    cohort = first_time_chron_macro_users
+    cohort = cdm_subsets[[i]][[first_t_chro_use_name]]
   )
 
 demo_name <- paste0("demographics_",names(cdm_subsets)[i],".csv")

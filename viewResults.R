@@ -7,7 +7,7 @@
 ######################       META DATA FIXER              ###################### 
 ################################################################################
 
-# so only necessary when object leave R-environment
+# so only necessary when object leave R-environment (i.e. when expoted)
 your_result_imported <- readr::read_csv(
   file = "your_result",
   guess_max = 2^53) %>%
@@ -28,15 +28,16 @@ your_result_imported_readable  <-
 ################################################################################
 
 # comorbidities & comedication
-CohortCharacteristics::tableCharacteristics(results_lsc)
+CohortCharacteristics::tableCharacteristics(results_comorb_comed$asthma) 
+#OR: substitute with "your_result_imported_readable" from previously
 
 # demographics
-CohortCharacteristics::tableCharacteristics(results_demographics)
+CohortCharacteristics::tableCharacteristics(results_demographics$asthma)
 
 # large scale characterization
-CohortCharacteristics::tableLargeScaleCharacteristics(your_result)
+CohortCharacteristics::tableLargeScaleCharacteristics(results_lsc$asthma)
 
 # ecg
-View(ecg_results$...)
+View(results_ecg$asthma)
 
 # for drug utilisation tables, view private link attached in email
