@@ -5,16 +5,18 @@ incidences_table <- c()
 
 # loop it all
 for (j in seq_along(duration_ranges)){
-  for(i in seq_along(cdm_subsets)){
+  for(i in seq_along(cohorts_of_interest)){
 
+    
 # naming convention for numerators
-num_name <- paste0("numerator","_",names(duration_ranges)[j],"_",names(cdm_subsets)[i])
-est_name <- paste0(names(cdm_subsets)[i],"_",names(duration_ranges)[j])
-denom_name <- paste0("denominator","_",names(cdm_subsets)[i])
+num_name <- paste0("numerator","_",names(duration_ranges)[j])
+est_name <- paste0(names(cohorts_of_interest)[i],"_",names(duration_ranges)[j])
+denom_name <- paste0("denominator","_",names(cohorts_of_interest)[i])
   
+
 # generate the numerator
-cdm_subsets[[i]] <- DrugUtilisation::generateDrugUtilisationCohortSet(
-  cdm = cdm_subsets[[i]],
+cdm <- DrugUtilisation::generateDrugUtilisationCohortSet(
+  cdm = cdm,
   name = num_name,
   conceptSet = all_concept_ids,
   durationRange = duration_ranges[[j]],
@@ -22,21 +24,36 @@ cdm_subsets[[i]] <- DrugUtilisation::generateDrugUtilisationCohortSet(
   gapEra = 7,
   priorUseWashout = 365,
   priorObservation = 0,
+  cohortDateRange = as.Date(c("2006-01-01", "2022-12-31")),
   limit = "all"
 )
 
-# generating the denominator
-cdm_subsets[[i]] <- IncidencePrevalence::generateTargetDenominatorCohortSet(
-  targetCohortTable = 'stud_cohorts',
-  cdm = cdm_subsets[[i]],
-  name = denom_name,
-  ageGroup = age_groups_analysis,
-  sex = sexes_analysis,
-  requirementInteractions = TRUE)
+
+# generating the denominator (different approach for general population)
+if (names(cohorts_of_interest)[i] == 'general_pop') {
+  cdm <- IncidencePrevalence::generateDenominatorCohortSet(
+    cdm = cdm,
+    name = denom_name,
+    cohortDateRange = as.Date(c("2006-01-01", "2022-12-31")),
+    ageGroup = age_groups_analysis,
+    sex = sexes_analysis,
+    requirementInteractions = TRUE)
+} else {
+  cdm <- IncidencePrevalence::generateTargetDenominatorCohortSet(
+    targetCohortTable = 'stud_cohorts',
+    targetCohortId = cohorts_of_interest[[i]],
+    cdm = cdm,
+    name = denom_name,
+    cohortDateRange = as.Date(c("2006-01-01", "2022-12-31")),
+    ageGroup = age_groups_analysis,
+    sex = sexes_analysis,
+    requirementInteractions = TRUE)
+} 
+
 
 # calculating prevalence
 prev <- IncidencePrevalence::estimatePeriodPrevalence(
-  cdm = cdm_subsets[[i]],
+  cdm = cdm,
   denominatorTable = denom_name,
   outcomeTable = num_name,
   denominatorCohortId = NULL, #all ids are selected
@@ -54,7 +71,7 @@ prev <- IncidencePrevalence::estimatePeriodPrevalence(
 
 # calculating incidence
 inc <- IncidencePrevalence::estimateIncidence(
-  cdm = cdm_subsets[[i]],
+  cdm = cdm,
   denominatorTable = denom_name,
   outcomeTable = num_name,
   denominatorCohortId = NULL, #all ids are selected
@@ -73,12 +90,11 @@ inc <- IncidencePrevalence::estimateIncidence(
     denominator_cohort_name = est_name)
 
 # store all estimates together
-
 prevalences_table <- rbind(prevalences_table,prev)
 incidences_table <- rbind(incidences_table,prev)
 
   } # closing duration loop
-} # closing cdm_subset loop
+} # closing cohort loop
 
 
 # save results

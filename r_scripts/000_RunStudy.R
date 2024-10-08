@@ -8,7 +8,7 @@ getwd()
 source("001a_settings_parameters_study.R")
 
 # make the subsets from the cdm
-source("001d_creating_cdm_subsets.R")
+source("001d_creating_cdm_cohorts.R")
 
 # create outcome definitions
 source("002_preparing_outcome_concept_sets.R")

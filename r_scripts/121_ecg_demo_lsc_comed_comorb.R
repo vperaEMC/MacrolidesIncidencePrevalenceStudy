@@ -8,23 +8,36 @@ results_ecg <- list()
 results_lsc <- list()
 results_demographics <- list()
 results_comorb_comed <- list()
+num_name <- paste0("numerator","_",names(duration_ranges)[1])
 
-for(i in seq_along(cdm_subsets)){
+for(i in seq_along(cohorts_of_interest)){
 
-  num_name <- paste0("numerator","_",names(duration_ranges)[1],"_",names(cdm_subsets)[i])
-  
-  first_t_chro_use_name <- paste0("first_time_chron_user","_",names(cdm_subsets)[i])
+  first_t_chro_use_name <- paste0("first_t_chron_user","_",names(cohorts_of_interest)[i])
+  denom_name <- paste0("denominator","_",names(cohorts_of_interest)[i])
   
 # I want to select the first record of macrolide prescription per cohort
-  cdm_subsets[[i]][[first_t_chro_use_name]] <-
-  cdm_subsets[[i]][[num_name]] %>%
-  dplyr::filter(cohort_definition_id == 4) %>%
-  dplyr::distinct(subject_id, .keep_all = TRUE) |> 
+  cdm[[first_t_chro_use_name]] <-
+  cdm[[num_name]] %>%  # select numerator, i.e. drug users
+    dplyr::right_join(cdm[[denom_name]], # right join with denominator, entire target cohort basically
+                      by = join_by(subject_id == subject_id, 
+                                   cohort_start_date >= cohort_start_date,
+                                   cohort_start_date <= cohort_end_date,
+                                   cohort_end_date >= cohort_start_date,
+                                   cohort_end_date <= cohort_end_date
+                      )) %>%
+    dplyr::filter(!is.na(cohort_start_date.x)) %>%
+    dplyr::select(1:4) %>%
+    dplyr::rename(cohort_definition_id = cohort_definition_id.x,
+                  cohort_start_date = cohort_start_date.x,
+                  cohort_end_date = cohort_end_date.x) %>%
+    dplyr::filter(cohort_definition_id == 4) %>%
+    dplyr::distinct(subject_id, .keep_all = TRUE) %>%
+    omopgenerics::newCohortTable(.softValidation = TRUE) %>% 
     compute()
   
 # intersect with ecg
 intersect_ecg <- PatientProfiles::addConceptIntersect(
-  x = cdm_subsets[[i]][[first_t_chro_use_name]],
+  x = cdm[[first_t_chro_use_name]],
   conceptSet = ecg_concept_ids,
   indexDate = "cohort_start_date",
   censorDate = "cohort_start_date",
@@ -44,10 +57,10 @@ intersect_ecg <- PatientProfiles::addConceptIntersect(
 
 # put result in lsit
 results_ecg[[i]] <- intersect_ecg
-names(results_ecg)[i] <- names(cdm_subsets)[i]
+names(results_ecg)[i] <- names(cohorts_of_interest)[i]
 
 # export csv file
-ecg_file_name <- paste0("ecg_",names(cdm_subsets)[i],".csv")
+ecg_file_name <- paste0("ecg_",names(cohorts_of_interest)[i],".csv")
 
 write.csv(intersect_ecg, here::here("Macrolides_v2", ecg_file_name))
 
@@ -55,40 +68,36 @@ write.csv(intersect_ecg, here::here("Macrolides_v2", ecg_file_name))
 ################################## LSC #########################################
 ################################################################################
 
-
-  # perform lsc on study population on condition occurrence and drug exposure
-  lsc_first_time_chron_macro_users <- cdm_subsets[[i]][[first_t_chro_use_name]] |> 
+  # perform lsc on study population on condition occurrence
+  lsc_first_time_chron_macro_users <- cdm[[first_t_chro_use_name]] |>
     CohortCharacteristics::summariseLargeScaleCharacteristics(
-      window = list(c(-7,0)),
+      window = list(c(-7,0), c(-14,0)),
       eventInWindow = c("condition_occurrence"),
-      minimumFrequency = 0#0.005
+      minimumFrequency = 0
     )
   
-  lsc_name <- paste0("lsc_",names(cdm_subsets)[i],".csv")
+  lsc_name <- paste0("lsc_",names(cohorts_of_interest)[i],".csv")
   
   # export csv file
-  # write.csv(lsc_cdm_subsets[[i]][[first_t_chro_use_name]], 
+  # write.csv(lsc_cdm[[first_t_chro_use_name]], 
   #           here::here("Macrolides_v2",lsc_name))
   omopgenerics::exportSummarisedResult(lsc_first_time_chron_macro_users,
                                        fileName = lsc_name,
                                        path = here::here("Macrolides_v2"))
   
   results_lsc[[i]] <- lsc_first_time_chron_macro_users
-  names(results_lsc)[i] <- names(cdm_subsets)[i]
+  names(results_lsc)[i] <- names(cohorts_of_interest)[i]
   
   ################################################################################
   ################################## DEMO ########################################
   ################################################################################
-  
 
-  
-  # demographics
   demographics_first_time_chron_macro_users <- 
     CohortCharacteristics::summariseCharacteristics(
-      cohort = cdm_subsets[[i]][[first_t_chro_use_name]]
+      cohort = cdm[[first_t_chro_use_name]]
     )
   
-  demo_name <- paste0("demographics_",names(cdm_subsets)[i],".csv")
+  demo_name <- paste0("demographics_",names(cohorts_of_interest)[i],".csv")
   
   # export csv file
   write.csv(demographics_first_time_chron_macro_users, 
@@ -99,19 +108,17 @@ write.csv(intersect_ecg, here::here("Macrolides_v2", ecg_file_name))
                                        path = here::here("Macrolides_v2"))
   
   results_demographics[[i]] <- demographics_first_time_chron_macro_users
-  names(results_demographics)[i] <- names(cdm_subsets)[i]
+  names(results_demographics)[i] <- names(cohorts_of_interest)[i]
   
 ################################################################################
 ############################# COMED & COMORB ###################################
 ################################################################################
-  
 
+    comed_name <- paste0("comedication","_",names(cohorts_of_interest)[i])  
+    comorb_name <- paste0("comorbidities","_",names(cohorts_of_interest)[i])  
     
-    comed_name <- paste0("comedication","_",names(cdm_subsets)[i])  
-    comorb_name <- paste0("comorbidities","_",names(cdm_subsets)[i])  
-    
-    cdm_subsets[[i]] <- CDMConnector::generateConceptCohortSet(
-      cdm = cdm_subsets[[i]],
+    cdm <- CDMConnector::generateConceptCohortSet(
+      cdm = cdm,
       conceptSet = concept_set_comedication,
       name = comed_name,
       limit = "all",
@@ -121,8 +128,8 @@ write.csv(intersect_ecg, here::here("Macrolides_v2", ecg_file_name))
       subsetCohortId = NULL,
       overwrite = TRUE
     )
-    cdm_subsets[[i]] <- CDMConnector::generateConceptCohortSet(
-      cdm = cdm_subsets[[i]],
+    cdm <- CDMConnector::generateConceptCohortSet(
+      cdm = cdm,
       conceptSet = concept_set_comorbidities,
       name = comorb_name,
       limit = "all",
@@ -134,7 +141,7 @@ write.csv(intersect_ecg, here::here("Macrolides_v2", ecg_file_name))
     )
     
     
-    comorb_comed_summarised <- cdm_subsets[[i]][[first_t_chro_use_name]] %>%
+    comorb_comed_summarised <- cdm[[first_t_chro_use_name]] %>%
       CohortCharacteristics::summariseCharacteristics(
         cohortIntersectFlag = list(
           comed_name = list(
@@ -152,7 +159,7 @@ write.csv(intersect_ecg, here::here("Macrolides_v2", ecg_file_name))
             targetCohortTable = comorb_name,
             targetStartDate = "cohort_start_date",
             targetEndDate = "cohort_end_date",
-            window = list(c(-365, 0)),
+            window = list(c(-Inf, 0)),
             nameStyle = "{cohort_name}_{window_name}"
           )
         )
@@ -164,5 +171,5 @@ write.csv(intersect_ecg, here::here("Macrolides_v2", ecg_file_name))
                                          path = here::here("Macrolides_v2"))
     
     results_comorb_comed[[i]] <- comorb_comed_summarised
-    names(results_comorb_comed)[i] <- names(cdm_subsets)[i]
+    names(results_comorb_comed)[i] <- names(cohorts_of_interest)[i]
   }
