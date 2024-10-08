@@ -2,6 +2,82 @@
   "items": [
     {
       "concept": {
+        "CONCEPT_CLASS_ID": "Dose Form Group",
+        "CONCEPT_CODE": "1151131",
+        "CONCEPT_ID": 36217214,
+        "CONCEPT_NAME": "Oral Product",
+        "DOMAIN_ID": "Drug",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "C",
+        "STANDARD_CONCEPT_CAPTION": "Classification",
+        "VOCABULARY_ID": "RxNorm",
+        "VALID_START_DATE": "2016-08-01",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Dose Form Group",
+        "CONCEPT_CODE": "1151130",
+        "CONCEPT_ID": 36217213,
+        "CONCEPT_NAME": "Nasal Product",
+        "DOMAIN_ID": "Drug",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "C",
+        "STANDARD_CONCEPT_CAPTION": "Classification",
+        "VOCABULARY_ID": "RxNorm",
+        "VALID_START_DATE": "2016-08-01",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Dose Form Group",
+        "CONCEPT_CODE": "1151127",
+        "CONCEPT_ID": 36217211,
+        "CONCEPT_NAME": "Rectal Product",
+        "DOMAIN_ID": "Drug",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "C",
+        "STANDARD_CONCEPT_CAPTION": "Classification",
+        "VOCABULARY_ID": "RxNorm",
+        "VALID_START_DATE": "2016-08-01",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Dose Form Group",
+        "CONCEPT_CODE": "1151122",
+        "CONCEPT_ID": 36217206,
+        "CONCEPT_NAME": "Topical Product",
+        "DOMAIN_ID": "Drug",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "C",
+        "STANDARD_CONCEPT_CAPTION": "Classification",
+        "VOCABULARY_ID": "RxNorm",
+        "VALID_START_DATE": "2016-08-01",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
         "CONCEPT_CLASS_ID": "Ingredient",
         "CONCEPT_CODE": "7213",
         "CONCEPT_ID": 1112921,
@@ -22,9 +98,9 @@
     {
       "concept": {
         "CONCEPT_CLASS_ID": "Clinical Dose Group",
-        "CONCEPT_CODE": "1158615",
-        "CONCEPT_ID": 36224639,
-        "CONCEPT_NAME": "ipratropium Nasal Product",
+        "CONCEPT_CODE": "1159139",
+        "CONCEPT_ID": 36226697,
+        "CONCEPT_NAME": "ipratropium Pill",
         "DOMAIN_ID": "Drug",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
@@ -40,17 +116,17 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Form",
-        "CONCEPT_CODE": "OMOP3063714",
-        "CONCEPT_ID": 44186991,
-        "CONCEPT_NAME": "Albuterol / Ipratropium Injectable Solution",
+        "CONCEPT_CLASS_ID": "Ingredient",
+        "CONCEPT_CODE": "39841",
+        "CONCEPT_ID": 943852,
+        "CONCEPT_NAME": "xylometazoline",
         "DOMAIN_ID": "Drug",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
         "STANDARD_CONCEPT": "S",
         "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-10-06",
+        "VOCABULARY_ID": "RxNorm",
+        "VALID_START_DATE": "1970-01-01",
         "VALID_END_DATE": "2099-12-31"
       },
       "isExcluded": true,
@@ -98,28 +174,9 @@
     {
       "concept": {
         "CONCEPT_CLASS_ID": "Clinical Drug Form",
-        "CONCEPT_CODE": "OMOP5162993",
-        "CONCEPT_ID": 1970405,
-        "CONCEPT_NAME": "ipratropium / xylometazoline Metered Dose Inhaler",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2022-01-28",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Form",
-        "CONCEPT_CODE": "OMOP938518",
-        "CONCEPT_ID": 43854688,
-        "CONCEPT_NAME": "Ipratropium / xylometazoline Nasal Solution",
+        "CONCEPT_CODE": "OMOP661779",
+        "CONCEPT_ID": 43784324,
+        "CONCEPT_NAME": "Ipratropium Oral Solution",
         "DOMAIN_ID": "Drug",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
@@ -127,215 +184,6 @@
         "STANDARD_CONCEPT_CAPTION": "Standard",
         "VOCABULARY_ID": "RxNorm Extension",
         "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Form",
-        "CONCEPT_CODE": "OMOP535385",
-        "CONCEPT_ID": 43266939,
-        "CONCEPT_NAME": "Ipratropium / xylometazoline Nasal Spray",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Form",
-        "CONCEPT_CODE": "OMOP2340889",
-        "CONCEPT_ID": 41142927,
-        "CONCEPT_NAME": "Ipratropium / xylometazoline Topical Solution",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP1099289",
-        "CONCEPT_ID": 44104658,
-        "CONCEPT_NAME": "Ipratropium 0.0006 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP3109825",
-        "CONCEPT_ID": 36258950,
-        "CONCEPT_NAME": "Ipratropium 0.084 MG/ACTUAT",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-10-01",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP1001321",
-        "CONCEPT_ID": 36888151,
-        "CONCEPT_NAME": "Ipratropium 0.3 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP4995845",
-        "CONCEPT_ID": 36075208,
-        "CONCEPT_NAME": "ipratropium 0.6 MG/ACTUAT",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2020-08-17",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "582110",
-        "CONCEPT_ID": 19121770,
-        "CONCEPT_NAME": "ipratropium 0.6 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "2005-11-13",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "440811",
-        "CONCEPT_ID": 19110458,
-        "CONCEPT_NAME": "ipratropium 10 MG",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "1970-01-01",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP2056056",
-        "CONCEPT_ID": 40858094,
-        "CONCEPT_NAME": "Ipratropium 5 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "836291",
-        "CONCEPT_ID": 1113038,
-        "CONCEPT_NAME": "ipratropium bromide 0.021 MG/ACTUAT",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "2009-04-05",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "836280",
-        "CONCEPT_ID": 19134092,
-        "CONCEPT_NAME": "ipratropium bromide 0.042 MG/ACTUAT",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "2009-04-05",
         "VALID_END_DATE": "2099-12-31"
       },
       "isExcluded": true,

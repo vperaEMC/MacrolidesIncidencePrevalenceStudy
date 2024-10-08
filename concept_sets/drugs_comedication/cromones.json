@@ -3,9 +3,9 @@
     {
       "concept": {
         "CONCEPT_CLASS_ID": "Ingredient",
-        "CONCEPT_CODE": "2921",
-        "CONCEPT_ID": 19008867,
-        "CONCEPT_NAME": "cromoglycate",
+        "CONCEPT_CODE": "31563",
+        "CONCEPT_ID": 1114620,
+        "CONCEPT_NAME": "nedocromil",
         "DOMAIN_ID": "Drug",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
@@ -16,6 +16,82 @@
         "VALID_END_DATE": "2099-12-31"
       },
       "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Clinical Drug Form",
+        "CONCEPT_CODE": "OMOP675327",
+        "CONCEPT_ID": 43821122,
+        "CONCEPT_NAME": "Nedocromil Prefilled Applicator",
+        "DOMAIN_ID": "Drug",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "RxNorm Extension",
+        "VALID_START_DATE": "2017-08-24",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Clinical Drug Form",
+        "CONCEPT_CODE": "OMOP2496220",
+        "CONCEPT_ID": 41298258,
+        "CONCEPT_NAME": "Nedocromil Topical Solution",
+        "DOMAIN_ID": "Drug",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "RxNorm Extension",
+        "VALID_START_DATE": "2017-08-24",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Clinical Dose Group",
+        "CONCEPT_CODE": "1157528",
+        "CONCEPT_ID": 36215499,
+        "CONCEPT_NAME": "nedocromil Nasal Product",
+        "DOMAIN_ID": "Drug",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "C",
+        "STANDARD_CONCEPT_CAPTION": "Classification",
+        "VOCABULARY_ID": "RxNorm",
+        "VALID_START_DATE": "2016-08-01",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Clinical Dose Group",
+        "CONCEPT_CODE": "1157529",
+        "CONCEPT_ID": 36215500,
+        "CONCEPT_NAME": "nedocromil Ophthalmic Product",
+        "DOMAIN_ID": "Drug",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "C",
+        "STANDARD_CONCEPT_CAPTION": "Classification",
+        "VOCABULARY_ID": "RxNorm",
+        "VALID_START_DATE": "2016-08-01",
+        "VALID_END_DATE": "2099-12-31"
+      },
+      "isExcluded": true,
       "includeDescendants": true,
       "includeMapped": false
     },
@@ -40,20 +116,20 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Dose Group",
-        "CONCEPT_CODE": "1155845",
-        "CONCEPT_ID": 36212532,
-        "CONCEPT_NAME": "cromolyn Nasal Product",
+        "CONCEPT_CLASS_ID": "Ingredient",
+        "CONCEPT_CODE": "2921",
+        "CONCEPT_ID": 19008867,
+        "CONCEPT_NAME": "cromoglycate",
         "DOMAIN_ID": "Drug",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
         "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "2016-08-01",
+        "VALID_START_DATE": "1970-01-01",
         "VALID_END_DATE": "2099-12-31"
       },
-      "isExcluded": true,
+      "isExcluded": false,
       "includeDescendants": true,
       "includeMapped": false
     },
@@ -98,25 +174,6 @@
     {
       "concept": {
         "CONCEPT_CLASS_ID": "Clinical Dose Group",
-        "CONCEPT_CODE": "1155848",
-        "CONCEPT_ID": 36212535,
-        "CONCEPT_NAME": "cromolyn Oral Product",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "2016-08-01",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Dose Group",
         "CONCEPT_CODE": "1155849",
         "CONCEPT_ID": 36212536,
         "CONCEPT_NAME": "cromolyn Pill",
@@ -136,47 +193,9 @@
     {
       "concept": {
         "CONCEPT_CLASS_ID": "Clinical Dose Group",
-        "CONCEPT_CODE": "1155850",
-        "CONCEPT_ID": 36212537,
-        "CONCEPT_NAME": "cromolyn Topical Product",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "2016-08-01",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Dose Group",
         "CONCEPT_CODE": "1155842",
         "CONCEPT_ID": 36212529,
         "CONCEPT_NAME": "cromolyn / xylometazoline Inhalant Product",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "2016-08-01",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Dose Group",
-        "CONCEPT_CODE": "1155843",
-        "CONCEPT_ID": 36212530,
-        "CONCEPT_NAME": "cromolyn / xylometazoline Nasal Product",
         "DOMAIN_ID": "Drug",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
@@ -497,9 +516,9 @@
     {
       "concept": {
         "CONCEPT_CLASS_ID": "Clinical Drug Form",
-        "CONCEPT_CODE": "OMOP901022",
-        "CONCEPT_ID": 43805229,
-        "CONCEPT_NAME": "Cromolyn Oral Granules",
+        "CONCEPT_CODE": "OMOP664657",
+        "CONCEPT_ID": 43748393,
+        "CONCEPT_NAME": "Cromolyn Prefilled Applicator",
         "DOMAIN_ID": "Drug",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
@@ -516,9 +535,9 @@
     {
       "concept": {
         "CONCEPT_CLASS_ID": "Clinical Drug Form",
-        "CONCEPT_CODE": "OMOP664657",
-        "CONCEPT_ID": 43748393,
-        "CONCEPT_NAME": "Cromolyn Prefilled Applicator",
+        "CONCEPT_CODE": "OMOP956780",
+        "CONCEPT_ID": 43621601,
+        "CONCEPT_NAME": "Cromolyn / reproterol Inhalant Solution",
         "DOMAIN_ID": "Drug",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
@@ -553,10 +572,10 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP2087684",
-        "CONCEPT_ID": 40889722,
-        "CONCEPT_NAME": "Cromoglycate 0.0933 MG/ML",
+        "CONCEPT_CLASS_ID": "Clinical Drug Form",
+        "CONCEPT_CODE": "OMOP901022",
+        "CONCEPT_ID": 43805229,
+        "CONCEPT_NAME": "Cromolyn Oral Granules",
         "DOMAIN_ID": "Drug",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
@@ -572,416 +591,17 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP2337556",
-        "CONCEPT_ID": 41139594,
-        "CONCEPT_NAME": "Cromoglycate 0.102 MG/MG",
+        "CONCEPT_CLASS_ID": "Clinical Dose Group",
+        "CONCEPT_CODE": "1155845",
+        "CONCEPT_ID": 36212532,
+        "CONCEPT_NAME": "cromolyn Nasal Product",
         "DOMAIN_ID": "Drug",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP2337555",
-        "CONCEPT_ID": 41139593,
-        "CONCEPT_NAME": "Cromoglycate 0.187 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP2493062",
-        "CONCEPT_ID": 41295100,
-        "CONCEPT_NAME": "Cromoglycate 0.2 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP5014095",
-        "CONCEPT_ID": 35857916,
-        "CONCEPT_NAME": "cromoglycate 0.4 MG",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2020-10-02",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP2337554",
-        "CONCEPT_ID": 41139592,
-        "CONCEPT_NAME": "Cromoglycate 0.667 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP2118648",
-        "CONCEPT_ID": 40920686,
-        "CONCEPT_NAME": "Cromoglycate 100 MG",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP5216403",
-        "CONCEPT_ID": 1235698,
-        "CONCEPT_NAME": "cromoglycate 100 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2023-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP2431157",
-        "CONCEPT_ID": 41233195,
-        "CONCEPT_NAME": "Cromoglycate 1.33 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP2149799",
-        "CONCEPT_ID": 40951837,
-        "CONCEPT_NAME": "Cromoglycate 13.3 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP5014093",
-        "CONCEPT_ID": 35857914,
-        "CONCEPT_NAME": "cromoglycate 160 MG",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2020-10-02",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP2337557",
-        "CONCEPT_ID": 41139595,
-        "CONCEPT_NAME": "Cromoglycate 200 MG",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP5216407",
-        "CONCEPT_ID": 1235702,
-        "CONCEPT_NAME": "cromoglycate 200 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2023-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP1005123",
-        "CONCEPT_ID": 36889239,
-        "CONCEPT_NAME": "Cromoglycate 20 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP2431158",
-        "CONCEPT_ID": 41233196,
-        "CONCEPT_NAME": "Cromoglycate 2 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP1003103",
-        "CONCEPT_ID": 36891216,
-        "CONCEPT_NAME": "Cromoglycate 40 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP2274766",
-        "CONCEPT_ID": 41076804,
-        "CONCEPT_NAME": "Cromoglycate 420 MG",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP2431156",
-        "CONCEPT_ID": 41233194,
-        "CONCEPT_NAME": "Cromoglycate 4 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP2243411",
-        "CONCEPT_ID": 41045449,
-        "CONCEPT_NAME": "Cromoglycate 500 MG",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP1006113",
-        "CONCEPT_ID": 36880507,
-        "CONCEPT_NAME": "Cromolyn 0.0143 MG/MG",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP994994",
-        "CONCEPT_ID": 36881488,
-        "CONCEPT_NAME": "Cromolyn 0.0143 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP1047886",
-        "CONCEPT_ID": 44053255,
-        "CONCEPT_NAME": "Cromolyn 0.02 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "343724",
-        "CONCEPT_ID": 1152692,
-        "CONCEPT_NAME": "cromolyn 0.04 MG/MG",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "STANDARD_CONCEPT": "C",
+        "STANDARD_CONCEPT_CAPTION": "Classification",
         "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "1970-01-01",
+        "VALID_START_DATE": "2016-08-01",
         "VALID_END_DATE": "2099-12-31"
       },
       "isExcluded": true,
@@ -990,36 +610,17 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP1000041",
-        "CONCEPT_ID": 36892163,
-        "CONCEPT_NAME": "Cromolyn 0.102 MG/MG",
+        "CONCEPT_CLASS_ID": "Clinical Dose Group",
+        "CONCEPT_CODE": "1155848",
+        "CONCEPT_ID": 36212535,
+        "CONCEPT_NAME": "cromolyn Oral Product",
         "DOMAIN_ID": "Drug",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "438748",
-        "CONCEPT_ID": 19109417,
-        "CONCEPT_NAME": "cromolyn 250 MG",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "STANDARD_CONCEPT": "C",
+        "STANDARD_CONCEPT_CAPTION": "Classification",
         "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "1970-01-01",
+        "VALID_START_DATE": "2016-08-01",
         "VALID_END_DATE": "2099-12-31"
       },
       "isExcluded": true,
@@ -1028,36 +629,17 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "OMOP1006363",
-        "CONCEPT_ID": 36888206,
-        "CONCEPT_NAME": "Cromolyn 2.8 MG/ML",
+        "CONCEPT_CLASS_ID": "Clinical Dose Group",
+        "CONCEPT_CODE": "1155850",
+        "CONCEPT_ID": 36212537,
+        "CONCEPT_NAME": "cromolyn Topical Product",
         "DOMAIN_ID": "Drug",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm Extension",
-        "VALID_START_DATE": "2017-08-24",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "543988",
-        "CONCEPT_ID": 19114353,
-        "CONCEPT_NAME": "cromolyn 40 MG/ACTUAT",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "STANDARD_CONCEPT": "C",
+        "STANDARD_CONCEPT_CAPTION": "Classification",
         "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "2005-09-11",
+        "VALID_START_DATE": "2016-08-01",
         "VALID_END_DATE": "2099-12-31"
       },
       "isExcluded": true,
@@ -1066,74 +648,17 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "831262",
-        "CONCEPT_ID": 1152773,
-        "CONCEPT_NAME": "cromolyn sodium 100 MG",
+        "CONCEPT_CLASS_ID": "Clinical Dose Group",
+        "CONCEPT_CODE": "1155843",
+        "CONCEPT_ID": 36212530,
+        "CONCEPT_NAME": "cromolyn / xylometazoline Nasal Product",
         "DOMAIN_ID": "Drug",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "STANDARD_CONCEPT": "C",
+        "STANDARD_CONCEPT_CAPTION": "Classification",
         "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "2009-02-01",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "360927",
-        "CONCEPT_ID": 19100180,
-        "CONCEPT_NAME": "cromolyn sodium 20 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "1970-01-01",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "831108",
-        "CONCEPT_ID": 19133625,
-        "CONCEPT_NAME": "cromolyn sodium 40 MG/ML",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "2009-02-01",
-        "VALID_END_DATE": "2099-12-31"
-      },
-      "isExcluded": true,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Drug Comp",
-        "CONCEPT_CODE": "360580",
-        "CONCEPT_ID": 19100013,
-        "CONCEPT_NAME": "cromolyn sodium 5.2 MG/ACTUAT",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "1970-01-01",
+        "VALID_START_DATE": "2016-08-01",
         "VALID_END_DATE": "2099-12-31"
       },
       "isExcluded": true,
