@@ -6,6 +6,7 @@ cohorts_of_interest <- list(
   'asthma' = 1664,
   'copd' = 1672,
   'aco' = 1673,
+  'gen_pop_no_resp' = 1683,
   'general_pop' = 9999)
 
 path_setting_cohort <- here::here("inst/cohorts")
