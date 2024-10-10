@@ -165,9 +165,11 @@ write.csv(intersect_ecg, here::here("Macrolides_v2", ecg_file_name))
         )
       )
     
+    comorb_comed_name <- paste0("comorb_comed_summarised_",names(cohorts_of_interest)[i],".csv")
+    
     # export csv file
     omopgenerics::exportSummarisedResult(comorb_comed_summarised,
-                                         fileName = "comorb_comed_summarised.csv",
+                                         fileName = comorb_comed_name,
                                          path = here::here("Macrolides_v2"))
     
     results_comorb_comed[[i]] <- comorb_comed_summarised
