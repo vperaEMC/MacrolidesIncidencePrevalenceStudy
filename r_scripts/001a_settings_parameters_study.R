@@ -6,8 +6,7 @@ cohorts_of_interest <- list(
   'asthma' = 1664,
   'copd' = 1672,
   'aco' = 1673,
-  'gen_pop_no_resp' = 1683,
-  'general_pop' = 9999)
+  'gen_pop_no_resp' = 1683)
 
 path_setting_cohort <- here::here("inst/cohorts")
 
@@ -23,9 +22,9 @@ time_interval <- c("overall","years")
 
 # list all the duration ranges of interest
 duration_ranges <- list(
-  "long" = c(30,Inf),
+  "long" = c(180,Inf),
   "short" = c(1,29),
-  "no_restriction" = c(1,Inf)
+  "medium" = c(30,179)
 )
 
 # age groups of interest
