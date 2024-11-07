@@ -27,15 +27,12 @@ your_result_imported_readable  <-
 ###################      FUNCTIONS TO VIEW RESULTS        ###################### 
 ################################################################################
 
-# comorbidities & comedication
-CohortCharacteristics::tableCharacteristics(results_comorb_comed$general_pop) 
+# comorbidities & comedication (& other demographics)
+CohortCharacteristics::tableCharacteristics(results_comorb_comed$first_time_users_asthma_medium) 
 #OR: substitute with "your_result_imported_readable" from previously
 
-# demographics
-CohortCharacteristics::tableCharacteristics(results_demographics$general_pop)
-
 # large scale characterization
-CohortCharacteristics::tableLargeScaleCharacteristics(results_lsc$general_pop)
+CohortCharacteristics::tableLargeScaleCharacteristics(results_lsc$first_time_users_copd_long)
 
 # ecg
 View(results_ecg$asthma)
