@@ -91,7 +91,7 @@ inc <- IncidencePrevalence::estimateIncidence(
 
 # store all estimates together
 prevalences_table <- rbind(prevalences_table,prev)
-incidences_table <- rbind(incidences_table,prev)
+incidences_table <- rbind(incidences_table,inc)
 
   } # closing duration loop
 } # closing cohort loop
