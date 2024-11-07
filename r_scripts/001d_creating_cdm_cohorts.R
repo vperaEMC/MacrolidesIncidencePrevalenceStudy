@@ -23,3 +23,8 @@ cdm <- CDMConnector::generate_cohort_set(
   name = "stud_cohorts",
   overwrite = TRUE
 )
+
+# get only prescription data, aiming to exclude dispensing data from SIDIAP
+cdm$drug_exposure <-
+  cdm$drug_exposure %>%
+  dplyr::filter(drug_type_concept_id %in% c(32838,32839))
