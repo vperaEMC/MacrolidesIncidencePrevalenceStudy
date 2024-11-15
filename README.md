@@ -1,4 +1,4 @@
-# macrolides_study_sidiap_test
+# STUDY: MACROLIDES AND ECGS IN ASTHMA, COPD AND ACOS
 Sharable R-project for executing the macrolides study
 
 Instructions:
