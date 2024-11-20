@@ -24,8 +24,7 @@ time_interval <- c("overall","years")
 duration_ranges <- list(
   "long" = c(180,Inf),
   "short" = c(1,29),
-  "medium" = c(30,179),
-  "long_old" = c(30,inf)
+  "medium" = c(30,179)
 )
 
 # age groups of interest

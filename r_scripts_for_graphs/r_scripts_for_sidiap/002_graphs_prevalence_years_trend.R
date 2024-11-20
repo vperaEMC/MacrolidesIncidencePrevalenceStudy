@@ -20,7 +20,6 @@ graphs_prevalence_years <- NULL
 durations <- list(
   '<30 days' = 'less than 30 days',
   '30-179 days' = 'between 30 and 179 days',
-  '≥30 days' = 'equal or more than 30 days',
   '=>180 days' = 'equal or more than 180 days'
 )
 

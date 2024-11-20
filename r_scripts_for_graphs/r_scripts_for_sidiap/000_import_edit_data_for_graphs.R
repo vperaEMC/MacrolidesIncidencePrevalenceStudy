@@ -61,8 +61,7 @@ results_inc_prev[[i]] <-
     duration = dplyr::case_when(
       stringr::str_detect(duration, '_short$',) ~ '<30 days',
       stringr::str_detect(duration, '_long$',) ~ '=>180 days', #unicode \U2265 works good in table, but not in console. But now its more easy searchable
-      stringr::str_detect(duration, '_medium$',) ~ '30-179 days',
-      stringr::str_detect(duration, '_long_old$',) ~ '=>30 days')
+      stringr::str_detect(duration, '_medium$',) ~ '30-179 days')
   ) %>%
   dplyr::mutate(prev_adj = 
                     scales::percent(prevalence, accuracy = 0.1)) %>%
@@ -95,8 +94,8 @@ results_inc_prev[[i]]$outcome_cohort_name <-
 results_inc_prev[[i]]$duration <-
   factor(
     results_inc_prev[[i]]$duration,
-    levels = c('<30 days','30-179 days', '=>30 days','=>180 days'),
-    labels = c('<30 days','30-179 days', paste0('\U2265','30 days'),paste0('\U2265','180 days')) #unicode insert
+    levels = c('<30 days','30-179 days', '=>180 days'),
+    labels = c('<30 days','30-179 days', paste0('\U2265','180 days')) #unicode insert
   )
 
 # factor the age-groups
