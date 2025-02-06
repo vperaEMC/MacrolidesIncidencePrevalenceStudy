@@ -1,7 +1,7 @@
 library(here)
 
 # setwd to the testscripts folder
-setwd(here::here("r_scripts"))
+setwd(here::here("r_scripts","001_data_gathering_and_processing"))
 getwd()
 
 # apply parameter settings for study
