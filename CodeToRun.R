@@ -54,6 +54,6 @@ cdm$person %>%
   tally()
 
 # Run the study ------
-source(here('r_scripts','000_RunStudy.R'))
+source(here::here('r_scripts','001_data_gathering_and_processing','000_RunStudy.R'))
 # after the study is run you should have a folder called Macrolides in 
 # the root of this project to be shared
