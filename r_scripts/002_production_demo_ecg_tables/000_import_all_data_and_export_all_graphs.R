@@ -295,7 +295,7 @@ for(i in seq_along(list_results_ecg_demo)){
   final_tables[[i]]$cdm_name <-
     factor(
       final_tables[[i]]$cdm_name,
-      levels = c('IPCI','SIDIAP'))
+      levels = c('SIDIAP','IPCI'))
   
   # for ease of table processing
   selected_table <- final_tables[[i]]
