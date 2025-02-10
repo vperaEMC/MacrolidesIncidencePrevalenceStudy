@@ -8,8 +8,8 @@ library(visOmopResults)
 
 # list all the db's contributing to analyses
 names_db <- list(
-  'IPCI' = 'ipci',  
-  'SIDIAP' = 'sidiap'
+  'SIDIAP' = 'sidiap',
+  'IPCI' = 'ipci'
 )
 
 # list cohorts of interest to be displayed
@@ -252,7 +252,8 @@ for(i in seq_along(list_results_ecg_demo)){
     dplyr::rename(
       'Variable' = 'variable_name',
       'Category' = 'variable_level',
-      'Unit of measure' = 'estimate_name') 
+      'Unit of measure' = 'estimate_name',
+      'Database' = 'cdm_name') 
   
   # adding the settings from one dataframe into the combined results dataframe
   # needed later for functions to accept the table for processing
@@ -292,10 +293,11 @@ for(i in seq_along(list_results_ecg_demo)){
   
   
   # factor database names
-  final_tables[[i]]$cdm_name <-
+  final_tables[[i]]$Database <-
     factor(
-      final_tables[[i]]$cdm_name,
-      levels = c('SIDIAP','IPCI'))
+      final_tables[[i]]$Database,
+      levels = c('SIDIAP','IPCI'),
+      labels = c('SIDIAP','IPCI'))
   
   # for ease of table processing
   selected_table <- final_tables[[i]]
@@ -304,7 +306,7 @@ for(i in seq_along(list_results_ecg_demo)){
   if(names(final_tables)[i] == 'results_demo_clean'){
     final_tables_ordered <- selected_table[
       order(
-        selected_table$cdm_name,
+        selected_table$Database,
         selected_table$Variable,
         selected_table$Category),] #yes, that last comma needs to stay
   }
@@ -312,7 +314,7 @@ for(i in seq_along(list_results_ecg_demo)){
   if(names(final_tables)[i] == 'results_ecg_clean'){
     final_tables_ordered <- selected_table[
       order(
-        selected_table$cdm_name,
+        selected_table$Database,
         selected_table$Category),]
     
     final_tables_ordered <-
@@ -336,7 +338,6 @@ for(i in seq_along(list_results_ecg_demo)){
       x = final_tables_ordered,
       style = 'default',
       title = title,
-      groupColumn = 'cdm_name',
       groupAsColumn = FALSE,
       colsToMergeRows = 'all_columns'
     )
