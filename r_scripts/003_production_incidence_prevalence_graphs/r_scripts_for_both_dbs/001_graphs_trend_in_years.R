@@ -66,7 +66,7 @@ for(j in seq_along(durations)){
     y2 <- 
       y1 + geom_line(aes(color=outcome_cohort_name)) + 
       ggplot2::labs(
-        y = "Prevalence",
+        y = "Period prevalence",
         x = "Year",
         title = paste0("Prevalence estimates with 95% confidence intervals of macrolide use in the the study populations through time, ", names(durations)[j],".")) +  
       scale_color_discrete(name="Macrolides")
@@ -151,7 +151,7 @@ for(g in seq_along(graphs_inc_prev_years)){
 
   ggplot2::ggsave(
     plot = graphs_inc_prev_years[[g]],
-    filename = paste0(names(graphs_inc_prev_years)[g],'.png'),
+    filename = paste0('year_trend_',names(graphs_inc_prev_years)[g],'.png'),
     path = here("figures"),
     width = 4000,
     height = 2500,
