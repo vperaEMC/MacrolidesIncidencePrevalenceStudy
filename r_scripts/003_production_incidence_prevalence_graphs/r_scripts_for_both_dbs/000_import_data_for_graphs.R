@@ -123,7 +123,7 @@ results_inc_prev[[i]]$outcome_cohort_name <-
       'Macrolides', 'Azithromycin', 'Clarithromycin','Erythromycin'
     ),
     labels = c(
-      'All macrolides', 'Azithromycin', 'Clarithromycin','Erythromycin'
+      'Any macrolide', 'Azithromycin', 'Clarithromycin','Erythromycin'
     )
   )
 
@@ -147,5 +147,13 @@ results_inc_prev[[i]]$denominator_age_group <-
       "0 to 9", "10 to 19", "20 to 29", "30 to 39","40 to 49", "50 to 59", 
       "60 to 69", "70 to 79", "80 to 89", "90 to 100", "All ages"
     )
+  )
+
+# factor cdm_name
+results_inc_prev[[i]]$cdm_name <-
+  factor(
+    results_inc_prev[[i]]$cdm_name,
+    levels = c('SIDIAP','IPCI'),
+    labels = c('SIDIAP','IPCI')
   )
 }
