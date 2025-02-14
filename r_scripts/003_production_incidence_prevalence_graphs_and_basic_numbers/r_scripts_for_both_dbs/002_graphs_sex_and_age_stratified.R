@@ -18,9 +18,9 @@ macrolides <- list(
 
 # gather duration levels
 durations <- list(
-  '<30 days' = 'less than 30 days',
-  '30-179 days' = 'between 30 and 179 days',
-  '≥180 days' = 'equal or more than 180 days'
+  '<30 days' = 'Macrolides, short-term prescribing (less than 30 days)',
+  '30-179 days' = 'Macrolides, medium-term prescribing (between 30-179 days)',
+  '≥180 days' = 'Macrolides, long-term prescribing (180 days and longer)'
 )
 
 # empty object to store graphs
@@ -85,7 +85,7 @@ for(i in seq_along(durations)){
       }
       
  # naming convention of the secondary axis
-      name_sec_x_axis <- 'Macrolides'
+      name_sec_x_axis <- durations[[i]]
       name_sec_y_axis <- 'Databases'
       
       a22 <- a21 + ggplot2::geom_col(
