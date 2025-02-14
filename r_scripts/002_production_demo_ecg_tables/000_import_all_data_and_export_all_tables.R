@@ -114,7 +114,7 @@ results_ecg_with_settings <- rbind(results_ecg, table_setting_rows)
 
 # a list of strings for column for renaming purposes
 replacements <- 
-  c('asthma' = 'Asthma', 'copd' = 'COPD', 'aco' = 'ACO', 
+  c('asthma' = 'Asthma', 'copd' = 'COPD', 'aco' = 'ACOS', 
     'gen_pop_no_resp' = 'Gen. pop.', '_' = ', ')
 
 replacements_ecg <-

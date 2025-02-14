@@ -51,19 +51,19 @@ results_inc_prev[[i]] <-
     denominator_target_cohort_name = dplyr::case_when( 
       denominator_target_cohort_name == 'cohort_1664' ~ 'Asthma',  ####
       denominator_target_cohort_name == 'cohort_1672' ~ 'COPD', 
-      denominator_target_cohort_name == 'cohort_1673' ~ 'ACO', 
+      denominator_target_cohort_name == 'cohort_1673' ~ 'ACOS', 
       denominator_target_cohort_name == 'cohort_1683' ~ 'Gen. pop.',
       .default = 'General population'
     ),
     denominator_target_cohort_integer = dplyr::case_when( 
       denominator_target_cohort_name == 'Asthma' ~ '1',
       denominator_target_cohort_name == 'COPD' ~ '2', 
-      denominator_target_cohort_name == 'ACO' ~ '3', 
+      denominator_target_cohort_name == 'ACOS' ~ '3', 
       denominator_target_cohort_name == 'Gen. pop.' ~ '4', 
       .default = 'General population'
     )) %>%
   dplyr::mutate(denominator_target_cohort_integer = as.integer(denominator_target_cohort_integer)) %>%
-  dplyr::filter(!(denominator_age_group == '30 to 39' & denominator_target_cohort_name %in% c('ACO','COPD'))) %>%
+  dplyr::filter(!(denominator_age_group == '30 to 39' & denominator_target_cohort_name %in% c('ACOS','COPD'))) %>%
   dplyr::filter(denominator_target_cohort_name != 'General population') %>%
   dplyr::rename(duration = denominator_cohort_name) %>%
   dplyr::mutate(
@@ -102,7 +102,7 @@ results_inc_prev[[i]]$denominator_target_cohort_integer <-
     levels = c(
       1,2,3,4
       ),
-    labels = c('Asthma', 'COPD', 'ACO', 'Gen. pop.')
+    labels = c('Asthma', 'COPD', 'ACOS', 'Gen. pop.')
     )
     )
 
@@ -110,9 +110,9 @@ results_inc_prev[[i]]$denominator_target_cohort_integer <-
 results_inc_prev[[i]]$denominator_target_cohort_name <-
   factor(
     results_inc_prev[[i]]$denominator_target_cohort_name,
-    levels = c('Asthma', 'COPD', 'ACO', 'Gen. pop.'
+    levels = c('Asthma', 'COPD', 'ACOS', 'Gen. pop.'
     ),
-    labels = c('Asthma', 'COPD', 'ACO', 'Gen. pop.')
+    labels = c('Asthma', 'COPD', 'ACOS', 'Gen. pop.')
   )
 
 # factor the drug names
