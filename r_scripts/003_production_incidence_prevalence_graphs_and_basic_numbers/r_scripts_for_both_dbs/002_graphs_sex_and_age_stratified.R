@@ -33,7 +33,7 @@ graph_topics <- list(
 )
 
 # provide order for labels on x-axis
-label_ordered <- c('Asthma', 'COPD', 'ACO', 'Gen. pop.')
+label_ordered <- c('Asthma', 'COPD', 'ACOS', 'Gen. pop.')
 
 for(i in seq_along(durations)){
   for(j in seq_along(graph_topics)){
@@ -110,11 +110,12 @@ for(i in seq_along(durations)){
         b2 <- 
           a22 + ggplot2::labs(x = "",
                               y = "Period prevalence",
-                              fill = fill_name,
-                              title = paste0(
-"Period prevalence estimates with 95% confidence intervals for time window ",
-durations[[i]],", for various macrolides, among study cohorts of interest, stratified by ", 
-graph_topics[[j]])) +
+                              fill = fill_name
+#                               ,title = paste0(
+# "Period prevalence estimates with 95% confidence intervals for time window ",
+# durations[[i]],", for various macrolides, among study cohorts of interest, stratified by ",
+# graph_topics[[j]])
+) +
           ggplot2::scale_y_continuous(
             #breaks=seq(0,0.8,0.05), 
             expand = c(0.005, 0),
@@ -126,11 +127,12 @@ graph_topics[[j]])) +
         b2 <- 
           a22 + ggplot2::labs(x = "",
                               y = "Incidence per 100,000 Person Years",
-                              fill = fill_name,
-                              title = paste0(
-"Incidence estimates with 95% confidence intervals for time window ",
-durations[[i]],", for various macrolides, among study cohorts of interest, stratified by ", 
-graph_topics[[j]])) +
+                              fill = fill_name
+#                               ,title = paste0(
+# "Incidence estimates with 95% confidence intervals for time window ",
+# durations[[i]],", for various macrolides, among study cohorts of interest, stratified by ",
+# graph_topics[[j]])
+) +
           ggplot2::scale_y_continuous(
             #breaks=seq(0,0.8,0.05), 
             expand = c(0.005, 0),

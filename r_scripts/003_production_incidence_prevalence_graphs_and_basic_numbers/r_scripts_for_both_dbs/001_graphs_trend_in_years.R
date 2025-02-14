@@ -68,7 +68,8 @@ for(j in seq_along(durations)){
       ggplot2::labs(
         y = "Period prevalence",
         x = "Year",
-        title = paste0("Prevalence estimates with 95% confidence intervals of macrolide use in the the study populations through time, ", names(durations)[j],".")) +  
+        #title = paste0("Prevalence estimates with 95% confidence intervals of macrolide use in the the study populations through time, ", names(durations)[j],".")
+        ) +  
       scale_color_discrete(name="Macrolides")
   } else if(names(results_inc_prev)[k] == 'incidence'){
     y2 <- 
@@ -76,7 +77,8 @@ for(j in seq_along(durations)){
       ggplot2::labs(
         y = "Incidence per 100,000 Person Years",
         x = "Year",
-        title = paste0("Incidence estimates with 95% confidence intervals of macrolide use in the the study populations through time, ", names(durations)[j],".")) +
+        #title = paste0("Incidence estimates with 95% confidence intervals of macrolide use in the the study populations through time, ", names(durations)[j],".")
+        ) +
       scale_color_discrete(name="Macrolides")
   }
   
