@@ -9,10 +9,17 @@ graphs_inc_prev_years <- NULL
 
 # gather duration levels
 durations <- list(
-  '<30 days' = 'less than 30 days',
-  '30-179 days' = 'between 30 and 179 days',
-  '≥180 days' = 'equal or more than 180 days'
+  '<30 days' = 'Macrolides, short-term prescribing (less than 30 days)',
+  '30-179 days' = 'Macrolides, medium-term prescribing (between 30-179 days)',
+  '≥180 days' = 'Macrolides, long-term prescribing (180 days and longer)'
 )
+
+durations_extra <- list(
+  '<30 days' = 'Macrolides,\nshort-term prescribing\n(less than 30 days)',
+  '30-179 days' = 'Macrolides,\nmedium-term prescribing\n(between 30-179 days)',
+  '≥180 days' = 'Macrolides,\nlong-term prescribing\n(180 days and longer)'
+)
+
 
 # establish upper limit for years
 year_min_max_data <- list()
@@ -61,6 +68,9 @@ for(j in seq_along(durations)){
         fill = outcome_cohort_name)
   )
   
+# legend title
+  legend_title <- durations_extra[[j]]
+  
  # add lines
   if(names(results_inc_prev)[k] == 'prevalence'){
     y2 <- 
@@ -70,7 +80,7 @@ for(j in seq_along(durations)){
         x = "Year",
         #title = paste0("Prevalence estimates with 95% confidence intervals of macrolide use in the the study populations through time, ", names(durations)[j],".")
         ) +  
-      scale_color_discrete(name="Macrolides")
+      scale_color_discrete(name=legend_title)
   } else if(names(results_inc_prev)[k] == 'incidence'){
     y2 <- 
       y1 + geom_line(aes(color=outcome_cohort_name)) + 
@@ -79,14 +89,14 @@ for(j in seq_along(durations)){
         x = "Year",
         #title = paste0("Incidence estimates with 95% confidence intervals of macrolide use in the the study populations through time, ", names(durations)[j],".")
         ) +
-      scale_color_discrete(name="Macrolides")
+      scale_color_discrete(name=legend_title)
   }
   
   
   # order seperate lines in seperate graphs in a grid
   y3 <- y2 + ggplot2::facet_grid(
     cols = vars(cdm_name),
-    rows = vars(denominator_target_cohort_name))
+    rows = vars(denominator_target_cohort_name)) 
   
   name_sec_x_axis <- 'Databases'
   name_sec_y_axis <- 'Study cohorts'
