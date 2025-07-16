@@ -22,9 +22,9 @@ cohorts_of_interest <- list(
 
 # list various durations
 duration_ranges <- list(
-  "short" = "short",
-  "medium" = "medium",
-  "long" = "long"
+  "short" = "Short",
+  "medium" = "Medium",
+  "long" = "Long"
 )
 
 # types of data to be imported
@@ -74,7 +74,7 @@ for (i in seq_along(names_db)){
               group_level != 'overall' ~ 'Cohort, macrolide use period',
               .default = 'overall'))
           
-          # remove last 4 rows settings-part, this will be readded later
+          # remove last 4 rows settings-part, this will be re-added later
           df_demo_trimmed <- 
             df_demo_import %>%
             dplyr::filter(row_number() <= n()-4)
@@ -114,8 +114,8 @@ results_ecg_with_settings <- rbind(results_ecg, table_setting_rows)
 
 # a list of strings for column for renaming purposes
 replacements <- 
-  c('asthma' = 'Asthma', 'copd' = 'COPD', 'aco' = 'ACOS', 
-    'gen_pop_no_resp' = 'Gen. pop.', '_' = ', ')
+  c('asthma' = 'Asthma', 'copd' = 'COPD', 'aco' = 'ACO', 
+    'gen_pop_no_resp' = 'Gen. pop.')
 
 replacements_ecg <-
   c(
@@ -133,7 +133,7 @@ results_demo_clean <-
   dplyr::mutate(
     variable_name = case_when(
       variable_name == 'Comed name' ~ 'Respiratory drug prescription, past year',
-      variable_name == 'Comorb name' ~ 'History of comorbidities',
+      variable_name == 'Comorb name' ~ 'History of comorbidities, any time prior cohort entry',
       variable_name == 'Number subjects' ~ 'Individuals, total',
       .default = variable_name
     ),
@@ -156,7 +156,13 @@ results_demo_clean <-
     across(
       'strata_level', 
       \(x) stringr::str_replace_all(
-        x, replacements)))
+        x, replacements))) %>%
+  tidyr::separate(strata_level, into = c("strata_level_1", "strata_level_2"), sep = "_") %>%
+  dplyr::mutate(strata_level_2 = case_when(
+    is.na(strata_level_2) ~ 'overall',
+    .default = strata_level_2
+  ))
+  
 
 # additional editing for appropriate row and column names
 results_ecg_clean <-
@@ -179,7 +185,12 @@ results_ecg_clean <-
     across(
       'variable_level', 
       \(x) stringr::str_replace_all(
-        x, replacements_ecg)))
+        x, replacements_ecg))) %>%
+  tidyr::separate(strata_level, into = c("strata_level_1", "strata_level_2"), sep = "_") %>%
+  dplyr::mutate(strata_level_2 = case_when(
+    is.na(strata_level_2) ~ 'overall',
+    .default = strata_level_2
+  ))
 
 # put demo and ecg results in list for easier processing purposes
 
@@ -232,7 +243,7 @@ for(i in seq_along(list_results_ecg_demo)){
                                          useFormatOrder = FALSE) %>%
         dplyr::filter(estimate_type != 'numeric') else .} %>%
     visOmopResults::formatHeader(
-      header = c('strata_name','strata_level'),
+      header = c('strata_name','strata_level_1','strata_level_2'),
       delim = '\n',
       includeHeaderName = FALSE,
       includeHeaderKey = FALSE) %>%
@@ -268,7 +279,7 @@ for(i in seq_along(list_results_ecg_demo)){
     final_tables[[i]]$Variable <-
       factor(
         final_tables[[i]]$Variable,
-        levels = c('Individuals, total','Age','Sex','History of comorbidities',
+        levels = c('Individuals, total','Age','Sex','History of comorbidities, any time prior cohort entry',
                    'Respiratory drug prescription, past year'))
     
     final_tables[[i]]$Category <-
@@ -319,7 +330,9 @@ for(i in seq_along(list_results_ecg_demo)){
     
     final_tables_ordered <-
       final_tables_ordered %>%
-      dplyr::mutate(Variable = 'Time window for ECG measure')
+      dplyr::mutate(Variable = case_when(
+        Category != 'Individuals, total' ~ 'Time window for ECG measure'
+      ), .default = NULL)
     
   }
   

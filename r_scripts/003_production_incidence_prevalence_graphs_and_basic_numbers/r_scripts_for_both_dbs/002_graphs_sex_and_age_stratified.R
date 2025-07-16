@@ -33,7 +33,7 @@ graph_topics <- list(
 )
 
 # provide order for labels on x-axis
-label_ordered <- c('Asthma', 'COPD', 'ACOS', 'Gen. pop.')
+label_ordered <- c('Asthma', 'COPD', 'ACO', 'Gen. pop.')
 
 for(i in seq_along(durations)){
   for(j in seq_along(graph_topics)){
